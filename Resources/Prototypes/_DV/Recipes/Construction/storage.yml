@@ -10,3 +10,101 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
+
+# Shelves
+- type: construction
+  id: LargeWoodStandingShelf
+  graph: StandingShelf
+  startNode: start
+  targetNode: largewoodstandingshelf
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: LargeMetalStandingShelf
+  graph: StandingShelf
+  startNode: start
+  targetNode: largemetalstandingshelf
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: WoodStandingDrawerShelf
+  graph: StandingShelf
+  startNode: start
+  targetNode: largewooddrawerstandingshelf
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: MetalStandingShelfMedical
+  graph: StandingShelf
+  startNode: start
+  targetNode: metalstandingshelfmedical
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: MetalStandingShelf
+  graph: StandingShelf
+  startNode: start
+  targetNode: metalstandingshelf
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: SmallWoodStandingShelf
+  graph: StandingShelf
+  startNode: start
+  targetNode: smallwoodstandingshelf
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+- type: construction
+  id: SmallMetalStandingShelf
+  graph: StandingShelf
+  startNode: start
+  targetNode: smallmetalstandingshelf
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked
+
+#Stands
+- type: construction
+  id: FruitStand
+  graph: StandingShelf
+  startNode: start
+  targetNode: fruitstand
+  category: construction-category-storage
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+  - !type:TileNotBlocked

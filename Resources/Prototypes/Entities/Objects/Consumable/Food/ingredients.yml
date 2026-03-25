@@ -93,6 +93,9 @@
         reagents:
         - ReagentId: Flour
           Quantity: 100 # DeltaV - More reagents for chefs
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Flour
 
 - type: entity
   parent: [ReagentPacketBase, ItemHeftyBase]
@@ -109,6 +112,9 @@
         reagents:
         - ReagentId: Flour
           Quantity: 20
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Flour
 
 - type: entity
   parent: ReagentPacketBase
@@ -124,6 +130,9 @@
         reagents:
         - ReagentId: Cornmeal
           Quantity: 100 # DeltaV - More reagents for chefs
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Cornmeal
 
 - type: entity
   parent: ReagentPacketBase
@@ -140,6 +149,9 @@
         reagents:
         - ReagentId: Cornmeal
           Quantity: 20
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Cornmeal
 
 - type: entity
   parent: ReagentPacketBase
@@ -155,6 +167,9 @@
         reagents:
         - ReagentId: Rice
           Quantity: 100 # DeltaV - More reagents for chefs
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Rice
 
 - type: entity
   parent: ReagentPacketBase
@@ -171,6 +186,9 @@
         reagents:
         - ReagentId: Rice
           Quantity: 20
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Rice
 
 - type: entity
   parent: ReagentPacketBase
@@ -186,6 +204,9 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 100 # DeltaV - More reagents for chefs
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Sugar
 
 - type: entity
   parent: ReagentPacketBase
@@ -202,6 +223,9 @@
         reagents:
         - ReagentId: Sugar
           Quantity: 20
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Sugar
 
 # Misc
 
@@ -222,6 +246,9 @@
           Quantity: 20
   - type: Edible
     edible: Drink # slurping sounds!
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - OliveOil
 
 - type: entity
   parent: ReagentPacketBase
@@ -732,6 +759,9 @@
   - type: SliceableFood
     count: 3
     slice: FoodCheeseSlice
+  - type: Tag # DeltaV - Storage Sprite
+    tags:
+      - Cheese
 
 - type: entity
   parent: FoodBakingBase
@@ -754,6 +784,7 @@
   - type: Tag
     tags:
     - Slice
+    - Cheese # DeltaV - Storage Sprite
   - type: FoodSequenceElement
     entries:
       Taco: CheeseTaco

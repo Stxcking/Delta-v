@@ -73,6 +73,7 @@
   - type: Tag
     tags:
     - Ointment
+    - RegenerativeMesh # DeltaV - Storage Sprite
   - type: Sprite
     state: regenerative-mesh
   - type: Item
@@ -168,6 +169,7 @@
   - type: Tag
     tags:
     - Brutepack
+    - MedicatedSuture # DeltaV - Storage Sprite
   - type: Sprite
     state: medicated-suture
   - type: Item

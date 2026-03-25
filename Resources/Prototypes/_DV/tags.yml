@@ -269,8 +269,31 @@
 
 - type: Tag
   id: ReinforcedCameraSupply # Reinforced Cameras - Logistics
-- type: Tag
-  id: GenderScarf
 
 - type: Tag
-  id: GenderCloak
+  id: GenderScarf
+# Storage Sprites Start
+- type: Tag
+  id: Cheese
+
+- type: Tag
+  id: Cornmeal
+
+- type: Tag
+  id: Flour
+
+- type: Tag
+  id: OliveOil
+
+- type: Tag
+  id: Rice
+
+- type: Tag
+  id: Sugar
+
+- type: Tag
+  id: RegenerativeMesh
+
+- type: Tag
+  id: MedicalSuture
+# Storage Sprites End

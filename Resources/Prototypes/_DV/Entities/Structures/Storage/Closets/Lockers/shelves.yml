@@ -1,0 +1,306 @@
+# Bases
+- type: entity
+  id: WoodStandingShelfBase
+  parent: BaseStructure
+  abstract: true
+  name: standing shelf
+  description: A piece of furniture to store or display things.
+  components:
+  - type: Damageable
+    damageModifierSet: Wood
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 60
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroyHeavy
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        spawn:
+          MaterialWoodPlank1:
+            min: 1
+            max: 6
+  - type: Storage
+    grid:
+    - 0,0,4,1
+    - 0,2,4,1
+    - 0,4,4,1
+    maxItemSize: Normal
+  - type: UserInterface
+    interfaces:
+     enum.StorageUiKey.Key:
+      type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: Appearance
+  - type: InteractionOutline
+  - type: Clickable
+  - type: Anchorable
+  - type: Rotatable
+
+- type: entity
+  id: MetalStandingShelfBase
+  parent: WoodStandingShelfBase
+  name: metal standing shelf
+  components:
+  - type: Damageable
+    damageModifierSet: Metal
+    damageContainer: StructuralInorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 80
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 5
+
+# Shelves
+- type: entity
+  id: SmallWoodStandingShelf
+  parent: WoodStandingShelfBase
+  name: small wooden standing shelf
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/small_shelves.rsi
+    state: wood
+  - type: Construction
+    graph: StandingShelf
+    node: smallwoodstandingshelf
+
+- type: entity
+  id: SmallMetalStandingShelf
+  parent: MetalStandingShelfBase
+  name: small metal standing shelf
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/small_shelves.rsi
+    state: metal
+  - type: Construction
+    graph: StandingShelf
+    node: smallmetalstandingshelf
+
+- type: entity
+  id: LargeWoodStandingShelf
+  parent: WoodStandingShelfBase
+  name: large wooden standing shelf
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/big_shelves.rsi
+    state: wood
+  - type: Storage
+    grid:
+    - 0,0,4,2
+    - 0,2,4,3
+    maxItemSize: Large
+  - type: Construction
+    graph: StandingShelf
+    node: largewoodstandingshelf
+
+- type: entity
+  id: LargeMetalStandingShelf
+  parent: MetalStandingShelfBase
+  name: large metal standing shelf
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/big_shelves.rsi
+    state: metal
+  - type: Storage
+    grid:
+    - 0,0,4,2
+    - 0,2,4,3
+    maxItemSize: Large
+  - type: Construction
+    graph: StandingShelf
+    node: largemetalstandingshelf
+
+- type: entity
+  id: LargeWoodDrawerStandingShelf
+  parent: WoodStandingShelfBase
+  name: large wooden standing shelf with drawers
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/big_shelves.rsi
+    layers:
+    - state: wood_drawers
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: EntityStorageVisuals
+    stateDoorOpen: wood_drawers_open
+    stateDoorClosed: wood_drawers
+  - type: EntityStorage
+    closeSound:
+      path: /Audio/Effects/woodenclosetclose.ogg
+    openSound:
+      path: /Audio/Effects/woodenclosetopen.ogg
+  - type: Storage
+    grid:
+    - 0,0,4,3
+    - 0,3,4,1
+    maxItemSize: Large
+  - type: Construction
+    graph: StandingShelf
+    node: largewooddrawerstandingshelf
+
+- type: entity
+  id: MetalStandingShelfMedical
+  parent: MetalStandingShelfBase
+  name: medical standing shelf cabinet
+  description: A white medical cabinet with a blue cross on the door.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/metal_medical.rsi
+    layers:
+    - state: shelf
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: EntityStorageVisuals
+    stateDoorOpen: open
+    stateDoorClosed: closed
+  - type: EntityStorage
+    closeSound:
+      path: /Audio/Effects/woodenclosetclose.ogg
+    openSound:
+      path: /Audio/Effects/woodenclosetopen.ogg
+  - type: Storage
+    grid:
+    - 0,0,4,3
+  - type: ItemMapper
+    mapLayers:
+      bloodpack:
+        whitelist:
+          tags:
+            - BloodPack
+      bruisepack:
+        whitelist:
+          tags:
+            - Brutepack
+      gauze:
+        whitelist:
+          tags:
+            - Gauze
+      mesh:
+        whitelist:
+          tags:
+            - RegenerativeMesh
+      ointment:
+        whitelist:
+          tags:
+            - Ointment
+      suture:
+        whitelist:
+          tags:
+            - MedicatedSuture
+  - type: Construction
+    graph: StandingShelf
+    node: metalstandingshelfmedical
+
+- type: entity
+  id: MetalStandingShelf
+  parent: MetalStandingShelfBase
+  name: metal standing shelf
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/Shelves/metal_kitchen.rsi
+    state: shelf
+  - type: ItemMapper
+    mapLayers:
+      cheese:
+        whitelist:
+          tags:
+            - Cheese
+      cornmeal:
+        whitelist:
+          tags:
+            - Cornmeal
+      flour:
+        whitelist:
+          tags:
+            - Flour
+      oliveoil:
+        whitelist:
+          tags:
+            - OliveOil
+      rice:
+        whitelist:
+          tags:
+            - Rice
+      sugar:
+        whitelist:
+          tags:
+            - Sugar
+  - type: Construction
+    graph: StandingShelf
+    node: metalstandingshelf
+
+# Stands
+- type: entity
+  id: FruitStand
+  parent: WoodStandingShelfBase
+  name: wooden fruit stand
+  description: A wooden stand, perfect for storing fruit.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/fruitstand.rsi
+    layers:
+    - state: stand
+    - state: fruit-0
+      map: ["enum.StorageFillLayers.Fill"]
+  - type: StorageFillVisualizer
+    maxFillLevels: 4
+    fillBaseName: fruit
+  - type: Storage
+    grid:
+    - 0,0,4,3
+    maxItemSize: Normal
+    whitelist:
+      tags:
+      - Fruit
+  - type: Construction
+    graph: StandingShelf
+    node: fruitstand
+
+- type: entity
+  id: FoodStand
+  parent: MetalStandingShelfBase
+  name: metal food stand
+  description: A metal display, perfect for storing food.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Storage/delistand.rsi
+    layers:
+    - state: stand
+    - state: food-0
+      map: ["enum.StorageFillLayers.Fill"]
+  - type: StorageFillVisualizer
+    maxFillLevels: 4
+    fillBaseName: food
+  - type: Storage
+    grid:
+    - 0,0,4,4
+    maxItemSize: Normal
+    whitelist:
+      tags:
+      - Meat
+      - Fruit
+      - ClothMade
+      - Pizza
+      - ReptilianFood
+      - Slice
+      - Bread
+      - Pie
+      - Cake
+      - Soup
+  - type: Construction
+    graph: StandingShelf
+    node: foodstand

@@ -12,6 +12,14 @@
             "directions": 4
         },
         {
+            "name": "closed",
+            "directions": 4
+        },
+        {
+            "name": "open",
+            "directions": 4
+        },
+        {
             "name": "bloodpack",
             "directions": 4
         },
@@ -28,7 +36,7 @@
             "directions": 4
         },
         {
-            "name": "oinment",
+            "name": "ointment",
             "directions": 4
         },
         {

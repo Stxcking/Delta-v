@@ -1,0 +1,191 @@
+- type: constructionGraph
+  id: StandingShelf
+  start: start
+  graph:
+  - node: start
+    edges:
+    - to: smallwoodstandingshelf
+      steps:
+      - material: WoodPlank
+        amount: 6
+        doAfter: 4
+    - to: smallmetalstandingshelf
+      steps:
+      - material: Steel
+        amount: 5
+        doAfter: 3
+    - to: largewoodstandingshelf
+      steps:
+      - material: WoodPlank
+        amount: 12
+        doAfter: 8
+    - to: largemetalstandingshelf
+      steps:
+      - material: Steel
+        amount: 10
+        doAfter: 6
+    - to: largewooddrawerstandingshelf
+      steps:
+      - material: WoodPlank
+        amount: 12
+        doAfter: 8
+    - to: metalstandingshelfmedical
+      steps:
+      - material: Steel
+        amount: 10
+        doAfter: 6
+    - to: metalstandingshelf
+      steps:
+      - material: Steel
+        amount: 6
+        doAfter: 3
+    - to: fruitstand
+      steps:
+      - material: WoodPlank
+        amount: 6
+        doAfter: 4
+    - to: foodstand
+      steps:
+      - material: Steel
+        amount: 8
+        doAfter: 4
+
+# Deconstruction
+    - node: smallwoodstandingshelf
+      entity: SmallWoodStandingShelf
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 3
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: MaterialWoodPlank1
+                amount: 6
+
+    - node: smallmetalstandingshelf
+      entity: SmallMetalStandingShelf
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: SheetSteel1
+                amount: 5
+
+    - node: largewoodstandingshelf
+      entity: LargeWoodStandingShelf
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 4
+            - tool: Prying
+              doAfter: 3
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: MaterialWoodPlank1
+                amount: 12
+
+    - node: largemetalstandingshelf
+      entity: LargeMetalStandingShelf
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+            - tool: Prying
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 2
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: SheetSteel1
+                amount: 10
+
+    - node: largewooddrawerstandingshelf
+      entity: LargeWoodDrawerStandingShelf
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 4
+            - tool: Prying
+              doAfter: 3
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: MaterialWoodPlank1
+                amount: 12
+
+    - node: metalstandingshelfmedical
+      entity: MetalStandingShelfMedical
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+            - tool: Prying
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 2
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: SheetSteel1
+                amount: 10
+
+    - node: metalstandingshelf
+      entity: MetalStandingShelf
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: SheetSteel1
+                amount: 6
+
+    - node: fruitstand
+      entity: FruitStand
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 3
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: MaterialWoodPlank1
+                amount: 6
+
+    - node: foodstand
+      entity: FoodStand
+      edges:
+        - to: start
+          steps:
+            - tool: Screwing
+              doAfter: 5
+            - tool: Prying
+              doAfter: 2
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+                prototype: SheetSteel1
+                amount: 8
