@@ -118,7 +118,7 @@
   name: onion rings recipe
   result: FoodOnionRings
   secretRecipe: true
-  time: 15
+  time: 5
   group: DeepFried
   deepFried: true
   solids:
