@@ -1122,7 +1122,7 @@
   - StationEngineerHardhatYellow
   - StationEngineerHardhatOrange
   - StationEngineerHardhatRed
-  - EngineerBeret # DeltaV - Was SeniorEngineerBeret
+  - SeniorEngineerBeret
 
 - type: loadoutGroup
   id: StationEngineerJumpsuit
