@@ -100,7 +100,7 @@
 #   snap: Center
   - type: Tag # DeltaV - Whitelist for Medical Borg
     tags:
-      - PatientTransportation
+    - PatientTransportation
 
 - type: entity
   parent: BaseItem

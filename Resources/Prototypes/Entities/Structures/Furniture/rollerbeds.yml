@@ -93,7 +93,7 @@
     enabled: False
   - type: Tag # DeltaV - Whitelist for Medical Borg
     tags:
-      - PatientTransportation
+    - PatientTransportation
 
 - type: entity
   id: CheapRollerBed
@@ -125,7 +125,7 @@
     enabled: False
   - type: Tag # DeltaV - Whitelist for Medical Borg
     tags:
-      - PatientTransportation
+    - PatientTransportation
 
 - type: entity
   id: EmergencyRollerBed
@@ -157,4 +157,4 @@
     enabled: False
   - type: Tag # DeltaV - Whitelist for Medical Borg
     tags:
-      - PatientTransportation
+    - PatientTransportation
