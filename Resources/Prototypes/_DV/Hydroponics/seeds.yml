@@ -104,9 +104,9 @@
   plantRsi: Objects/Specific/Hydroponics/ambrosia_deus.rsi
   packetPrototype: AmbrosiaNobilis
   productPrototypes:
-    - FoodAmbrosiaNobilis
+  - FoodAmbrosiaNobilis
   mutationPrototypes:
-    - ambrosiaDeus
+  - ambrosiaDeus
   lifespan: 25
   maturation: 10
   production: 3
