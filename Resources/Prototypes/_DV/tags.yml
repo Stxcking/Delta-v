@@ -284,8 +284,12 @@
 
 - type: Tag
   id: ReinforcedCameraSupply # Reinforced Cameras - Logistics
+
 - type: Tag
   id: GenderScarf
 
 - type: Tag
   id: GenderCloak
+
+- type: Tag
+  id: PatientTransportation # Rollerbed/Hoverbed/Bodybags Whitelist for Medical Borg

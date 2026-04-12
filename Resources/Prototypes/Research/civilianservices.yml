@@ -147,6 +147,7 @@
   cost: 5000
   recipeUnlocks:
   - BorgModuleAdvancedTopical
+  - BorgModuleAdvancedChemicalDV # DeltaV - Readd Chemical Module
   - AdvancedJetInjector
 
 - type: technology

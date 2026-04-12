@@ -288,3 +288,10 @@
     Silver: 100
     Plasma: 500
     Bluespace: 300
+
+# Medical
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedChemicalDV
+  result: BorgModuleAdvancedChemicalDV
