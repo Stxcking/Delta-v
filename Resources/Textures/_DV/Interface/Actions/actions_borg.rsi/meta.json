@@ -60,6 +60,12 @@
         },
         {
             "name": "service-boxing-module"
+        },
+        {
+            "name": "service-chef-module"
+        },
+        {
+            "name": "service-adv-chef-module"
         }
     ]
 }

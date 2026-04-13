@@ -64,6 +64,9 @@
     damage:
       types:
         Blunt: 0
+  - type: Tag
+    tags:
+    - Ingredients
 
 - type: entity
   abstract: true

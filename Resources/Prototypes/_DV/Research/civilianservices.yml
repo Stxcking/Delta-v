@@ -23,3 +23,16 @@
   cost: 7000
   recipeUnlocks:
   - PlantAnalyzer
+
+- type: technology
+  id: ServiceBorgModuleTechnology
+  name: research-technology-service-borg-module
+  icon:
+    sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
+    state: service
+  discipline: CivilianServices
+  tier: 2
+  cost: 7000
+  recipeUnlocks:
+  - BorgAdvancedModuleChef
+

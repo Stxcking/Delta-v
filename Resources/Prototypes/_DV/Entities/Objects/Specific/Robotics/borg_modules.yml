@@ -713,3 +713,135 @@
           - Produce
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: harvesting-module }
+
+- type: entity
+  id: BorgModuleChef
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: chef cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-chef
+  - type: ItemBorgModule
+    hands:
+    - item: KitchenKnife
+    - item: RollingPin
+    - item: Beaker
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: Beaker
+        whitelist:
+          tags:
+          - GlassBeaker
+    - item: ReagentContainerFlour
+      hand:
+        emptyLabel: borg-slot-ingredients-empty
+        emptyRepresentative: ReagentContainerFlour
+        whitelist:
+          components:
+          - Produce
+          tags:
+          - Ingredients
+          - Fruits
+          - Vegetable
+    - hand:
+        emptyLabel: borg-slot-food-empty
+        emptyRepresentative: FoodPizzaMargheritaSlice
+        whitelist:
+          components:
+          - Edible
+    - hand:
+        emptyLabel: borg-slot-food-empty
+        emptyRepresentative: FoodPizzaMargheritaSlice
+        whitelist:
+          components:
+          - Edible
+    - item: FoodShakerSalt
+      hand:
+        emptyLabel: borg-slot-condiments-empty
+        emptyRepresentative: FoodShakerSalt
+        whitelist:
+          tags:
+          - SaltShaker
+          - PepperShaker
+          - BBQsauce
+          - Ketchup
+          - Hotsauce
+          - Coldsauce
+          - Enzyme
+    - item: FoodPlate
+      hand:
+        emptyLabel: borg-slot-dinnerware-empty
+        emptyRepresentative: FoodPlateSmall
+        whitelist:
+          tags:
+          - Dinnerware
+    - hand:
+        emptyLabel: borg-slot-kitchenware-empty
+        emptyRepresentative: FoodPlateTin
+        whitelist:
+          tags:
+          - Kitchenware
+          - Skewer
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-chef-module }
+
+- type: entity
+  id: BorgAdvancedModuleChef
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: advanced chef cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-adv-chef
+  - type: ItemBorgModule
+    hands:
+    - item: AdvancedMicrowaveBorg
+    - item: Beaker
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: Beaker
+        whitelist:
+          tags:
+          - GlassBeaker
+    - item: ReagentContainerFlourBorg
+    - hand:
+        emptyLabel: borg-slot-ingredients-empty
+        emptyRepresentative: ReagentContainerFlour
+        whitelist:
+          components:
+          - Produce
+          tags:
+          - Ingredients
+          - Fruits
+          - Vegetable
+    - hand:
+        emptyLabel: borg-slot-food-empty
+        emptyRepresentative: FoodPizzaMargheritaSlice
+        whitelist:
+          components:
+          - Edible
+    - hand:
+        emptyLabel: borg-slot-food-empty
+        emptyRepresentative: FoodPizzaMargheritaSlice
+        whitelist:
+          components:
+          - Edible
+    - item: FoodPlate
+      hand:
+        emptyLabel: borg-slot-dinnerware-empty
+        emptyRepresentative: FoodPlateSmall
+        whitelist:
+          tags:
+          - Dinnerware
+    - hand:
+        emptyLabel: borg-slot-kitchenware-empty
+        emptyRepresentative: FoodPlateTin
+        whitelist:
+          tags:
+          - Kitchenware
+          - Skewer
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-adv-chef-module }

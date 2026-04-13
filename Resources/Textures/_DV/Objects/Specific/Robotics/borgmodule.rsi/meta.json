@@ -93,6 +93,13 @@
         },
         {
             "name": "icon-adv-botany"
+        },
+        {
+            "name": "icon-chef"
+        }
+,
+        {
+            "name": "icon-adv-chef"
         }
     ]
 }

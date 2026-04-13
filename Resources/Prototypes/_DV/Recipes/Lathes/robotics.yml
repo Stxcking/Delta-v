@@ -305,3 +305,8 @@
   parent: BaseBorgModuleRecipe
   id: BorgModuleAdvancedBotany
   result: BorgModuleAdvancedBotany
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgAdvancedModuleChef
+  result: BorgAdvancedModuleChef

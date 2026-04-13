@@ -2,6 +2,8 @@
   parent: BaseItem
   id: ClothingHandsGlovesBoxingRedBorg
   name: red boxing gloves
+  suffix: Borg
+  categories: [ DoNotMap ]
   description: Red gloves for competitive boxing.
   components:
   - type: Sprite
@@ -22,6 +24,8 @@
   parent: BaseItem
   id: BoxingBellBorg
   name: boxing bell
+  suffix: Borg
+  categories: [ DoNotMap ]
   description: Ding ding!
   components:
   - type: Sprite
@@ -41,7 +45,7 @@
 - type: entity
   parent: BaseItem
   id: PlantAnalyzerUnpowered
-  name: plant analyzer
+  name: integrated plant analyzer
   suffix: Borg
   categories: [ DoNotMap ]
   description: A handheld device that allows you to scan seeds and plants to get detailed information about their genes.
@@ -61,6 +65,8 @@
     interfaces:
       enum.PlantAnalyzerUiKey.Key:
         type: PlantAnalyzerBoundUserInterface
+  - type: ItemToggle
+    onUse: false
   - type: PlantAnalyzer
     settings:
       scanDelay: 1
@@ -74,8 +80,80 @@
   id: BoxMouthSwabBorg
   suffix: Borg
   categories: [ DoNotMap ]
-  name: sterile swab dispenser
+  name: integrated sterile swab dispenser
   description: Dispenses renewable sterile swabs, extremely useful for botany.
   components:
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 2
+
+- type: entity
+  parent: BaseItem
+  id: AdvancedMicrowaveBorg
+  name: integrated advanced microwave
+  suffix: Borg
+  categories: [ DoNotMap ]
+  description: You very own built-in radiation generator.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Machines/advanced_microwave.rsi
+    state: mw
+  - type: Microwave
+    powerRequired: false
+    cookTimeMultiplier: 0.5
+    capacity: 30
+    canMicrowaveIdsSafely: false
+  - type: FoodRecipeProvider
+    providedRecipes:
+    - RecipeBaguetteSword
+    - RecipeThrowingCroissant
+  - type: ApcPowerReceiver
+    powerLoad: 0
+    needsPower: false
+  - type: ActivatableUI
+    key: enum.MicrowaveUiKey.Key
+  - type: DeviceNetwork
+    deviceNetId: Wireless
+    receiveFrequencyId: BasicDevice
+  - type: WirelessNetworkConnection
+    range: 200
+  - type: UserInterface
+    interfaces:
+      enum.MicrowaveUiKey.Key:
+        type: MicrowaveBoundUserInterface
+  - type: GuideHelp
+    guides:
+    - Chef
+    - FoodRecipes
+
+- type: entity
+  parent: [ReagentPacketBase, ItemHeftyBase]
+  id: ReagentContainerFlourBorg
+  name: integrated flour bag
+  suffix: Borg
+  categories: [ DoNotMap ]
+  description: A renewing flour bag that regenerates its contents!
+  components:
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.OpenableVisuals.Opened:
+        enum.OpenableVisuals.Layer:
+          True: {state: "flour-big_open"}
+          False: {state: "flour-big"}
+    layers:
+    - state: flour-big
+      map: ["enum.OpenableVisuals.Layer"]
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 50
+        reagents:
+        - ReagentId: Flour
+          Quantity: 50
+  - type: SolutionRegeneration
+    solution: food
+    duration: 20
+    generated:
+      reagents:
+      - ReagentId: Flour
+        Quantity: 5
