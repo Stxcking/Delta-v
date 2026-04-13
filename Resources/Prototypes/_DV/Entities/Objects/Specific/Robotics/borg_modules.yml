@@ -945,3 +945,78 @@
           - FitsInDispenser
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-adv-bar-module }
+
+- type: entity
+  id: BorgModuleReporter
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: reporter cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-reporter
+  - type: ItemBorgModule
+    hands:
+    - item: LuxuryPen
+    - item: BoxFolderClipboardThreePapers
+      hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: BoxFolderClipboardEmpty
+        whitelist:
+          tags:
+          - Book
+          - Document
+          - Write
+    - item: TapeRecorder
+    - item: CassetteTape
+      hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: BoxFolderClipboardEmpty
+        whitelist:
+          components:
+          - FitsInTapeRecorder
+    - item: CameraBugBorg
+    - item: SurveillanceWirelessCameraBorg
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-reporter-module }
+
+- type: entity
+  id: BorgModuleFishing
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: fishing cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-fish
+  - type: ItemBorgModule
+    hands:
+    - item: FishingRod
+      hand:
+        emptyLabel: borg-slot-rod-empty
+        emptyRepresentative: FishingRod
+        whitelist:
+          components:
+          - FishingRod
+    - item: FishBasket
+    - hand:
+        emptyLabel: borg-slot-fish-empty
+        emptyRepresentative: FishBass
+        whitelist:
+          components:
+          - Fish
+    - hand:
+        emptyLabel: borg-slot-fish-empty
+        emptyRepresentative: FishCat
+        whitelist:
+          components:
+          - Fish
+    - hand:
+        emptyLabel: borg-slot-drinkbottle-empty
+        emptyRepresentative: DrinkBeerBottleFull
+        whitelist:
+          tags:
+          - DrinkBottle
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-fish-module }
+

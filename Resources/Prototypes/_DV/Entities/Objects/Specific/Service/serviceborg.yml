@@ -283,3 +283,51 @@
         - id: DrinkTeaJug
         - id: DrinkTonicWaterBottleFull
         - id: DrinkWaterMelonJuiceJug
+
+- type: entity
+  id: CameraBugBorg
+  parent: CameraBug
+  suffix: Borg
+  categories: [ DoNotMap ]
+  name: integrated camera monitor
+  description: Allows you to view into the station's camera network.
+  components:
+  - type: ActivatableUI
+    requireActiveHand: false
+    inHandsOnly: false
+
+- type: entity
+  parent: BaseItem
+  id: SurveillanceWirelessCameraBorg
+  suffix: Borg
+  categories: [ DoNotMap ]
+  name: intergated wireless camera
+  description: A camera that projects from you.
+  components:
+    - type: InteractionOutline
+    - type: Eye
+    - type: WirelessNetworkConnection
+      range: 200
+    - type: SurveillanceCameraMicrophone
+      blacklist:
+        components:
+          - SurveillanceCamera
+          - SurveillanceCameraMonitor
+          - RadioSpeaker
+    - type: ActiveListener
+      range: 10
+    - type: UserInterface
+      interfaces:
+        enum.SurveillanceCameraSetupUiKey.Camera:
+          type: SurveillanceCameraSetupBoundUi
+    - type: DeviceNetwork
+      deviceNetId: Wireless
+      receiveFrequencyId: SurveillanceCameraEntertainment
+      transmitFrequencyId: SurveillanceCamera
+    - type: SurveillanceCamera
+      networkSet: true
+    - type: Sprite
+      sprite: Structures/monitors.rsi
+      layers:
+        - map: [ "enum.SurveillanceCameraVisualsKey.Key" ]
+          state: television

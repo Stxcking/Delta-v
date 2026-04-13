@@ -316,3 +316,12 @@
   id: BorgModuleAdvancedBartender
   result: BorgModuleAdvancedBartender
 
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleReporter
+  result: BorgModuleReporter
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleFishing
+  result: BorgModuleFishing

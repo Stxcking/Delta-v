@@ -19,3 +19,5 @@ borg-slot-ingredients-empty = Ingredients slot
 borg-slot-condiments-empty = Condiments slot
 borg-slot-food-empty = Food slot
 borg-slot-drinkbottle-empty = Drink bottle slot
+borg-slot-rod-empty = Fishing rod slot
+borg-slot-fish-empty = Fish slot

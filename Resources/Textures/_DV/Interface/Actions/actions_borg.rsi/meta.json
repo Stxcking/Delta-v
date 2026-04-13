@@ -72,6 +72,12 @@
         },
         {
             "name": "service-adv-bar-module"
+        },
+        {
+            "name": "service-reporter-module"
+        },
+        {
+            "name": "service-fish-module"
         }
     ]
 }

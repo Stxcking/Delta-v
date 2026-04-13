@@ -105,6 +105,13 @@
         },
         {
             "name": "icon-adv-bar"
+        },
+        {
+            "name": "icon-reporter"
+        }
+,
+        {
+            "name": "icon-fish"
         }
     ]
 }

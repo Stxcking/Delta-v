@@ -56,6 +56,8 @@
   recipes:
   - BorgModuleBureaucracy
   - BorgModuleBoxing
+  - BorgModuleReporter
+  - BorgModuleFishing
 
 # If you add anything to this, know that the SyndicateExosuitFabricator does not
 # get this pack due to IdChipBorgAA not being available to SRNs. Probably should
