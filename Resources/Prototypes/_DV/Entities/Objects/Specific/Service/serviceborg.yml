@@ -37,3 +37,45 @@
         path:
           "/Audio/Weapons/boxingbell.ogg"
   - type: Appearance
+
+- type: entity
+  parent: BaseItem
+  id: PlantAnalyzerUnpowered
+  name: plant analyzer
+  suffix: Borg
+  categories: [ DoNotMap ]
+  description: A handheld device that allows you to scan seeds and plants to get detailed information about their genes.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Devices/plant_analyzer.rsi
+    layers:
+    - state: plantanalyzer
+    - state: unlit
+      map: [ "enum.PowerDeviceVisualLayers.Powered" ]
+      shader: unshaded
+  - type: Item
+    storedRotation: -90
+  - type: ActivatableUI
+    key: enum.PlantAnalyzerUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.PlantAnalyzerUiKey.Key:
+        type: PlantAnalyzerBoundUserInterface
+  - type: PlantAnalyzer
+    settings:
+      scanDelay: 1
+      advScanDelay: 1.5
+    scanningEndSound:
+      path: "/Audio/Items/Medical/healthscanner.ogg"
+  - type: Appearance
+
+- type: entity
+  parent: BoxMouthSwab
+  id: BoxMouthSwabBorg
+  suffix: Borg
+  categories: [ DoNotMap ]
+  name: sterile swab dispenser
+  description: Dispenses renewable sterile swabs, extremely useful for botany.
+  components:
+  - type: RechargeBasicEntityAmmo
+    rechargeCooldown: 2

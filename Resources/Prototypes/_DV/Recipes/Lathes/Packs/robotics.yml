@@ -106,3 +106,8 @@
   - DispelLeftArm
   - RecallLeftArm
   - ForcewallLeftArm
+
+- type: latheRecipePack
+  id: BorgModulesServiceDynamicDV
+  recipes:
+  - BorgModuleAdvancedBotany

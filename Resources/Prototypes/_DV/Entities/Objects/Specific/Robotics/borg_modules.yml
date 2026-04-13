@@ -558,7 +558,6 @@
           - Figurine
           - TabletopBoard
           - Write
-    - item: PaperBin20
     - hand:
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: d20Dice
@@ -617,3 +616,100 @@
     - item: BoxingBellBorg
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-boxing-module }
+
+- type: entity
+  id: BorgModuleGardeningDV
+  parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
+  name: botany cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-gardening
+  - type: ItemBorgModule
+    hands:
+    - item: HydroponicsToolMiniHoe
+    - item: HydroponicsToolSpade
+    - item: HydroponicsToolClippers
+    - item: HydroponicsToolScythe
+    - item: HydroponicsToolHatchet
+    - item: Bucket
+    - item: PlantBag
+    - hand:
+        emptyLabel: borg-slot-produce-empty
+        emptyRepresentative: WheatSeeds
+        whitelist:
+          components:
+          - Seed
+          - Produce
+    - hand:
+        emptyLabel: borg-slot-produce-empty
+        emptyRepresentative: WheatBushel
+        whitelist:
+          components:
+          - Seed
+          - Produce
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: gardening-module }
+
+- type: entity
+  id: BorgModuleAdvancedBotany
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: advanced botany cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-adv-botany
+  - type: ItemBorgModule
+    hands:
+    - item: PlantAnalyzerUnpowered
+    - item: BoxMouthSwabBorg
+    - item: DiseaseSwab
+      hand:
+        emptyLabel: borg-slot-swabs-empty
+        emptyRepresentative: DiseaseSwab
+        whitelist:
+          components:
+          - BotanySwab
+    - item: BorgDropper
+      hand:
+        emptyLabel: borg-slot-injector-dropper-empty
+        emptyRepresentative: Dropper
+        whitelist:
+          tags:
+          - Dropper
+          - Syringe
+    - item: ChemistryBottleRobustHarvest
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: Beaker
+        whitelist:
+          tags:
+          - Bottle
+          - GlassBeaker
+    - item: ChemistryBottleUnstableMutagen
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: Beaker
+        whitelist:
+          tags:
+          - Bottle
+          - GlassBeaker
+    - item: PlantBagOfHolding
+    - hand:
+        emptyLabel: borg-slot-produce-empty
+        emptyRepresentative: WheatSeeds
+        whitelist:
+          components:
+          - Seed
+          - Produce
+    - hand:
+        emptyLabel: borg-slot-produce-empty
+        emptyRepresentative: WheatBushel
+        whitelist:
+          components:
+          - Seed
+          - Produce
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: harvesting-module }

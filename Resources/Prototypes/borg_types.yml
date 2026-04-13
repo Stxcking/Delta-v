@@ -250,8 +250,8 @@
   - BorgModuleMusique
 #  - BorgModuleService # DeltaV - Rework Service Borg
   - BorgModuleClowning
-  - BorgModuleGardening
-  - BorgModuleHarvesting
+  - BorgModuleGardeningDV # DeltaV - Rework Service Borg
+#  - BorgModuleHarvesting # DeltaV - Rework Service Borg
   radioChannels:
   - Science
   - Service

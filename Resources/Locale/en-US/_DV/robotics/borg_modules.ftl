@@ -11,3 +11,5 @@ borg-slot-pka-upgrade-empty = PKA upgrades
 borg-slot-forensic-empty = Forensic reports and bureaucracy supplies
 
 borg-slot-medals-empty = Medal
+borg-slot-produce-empty = Seeds or plants
+borg-slot-swabs-empty = Swabs
