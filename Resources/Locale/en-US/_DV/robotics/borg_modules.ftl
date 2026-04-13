@@ -9,3 +9,5 @@ borg-slot-spraypaint-empty = Spraypaint supplies
 borg-slot-pka-upgrade-empty = PKA upgrades
 
 borg-slot-forensic-empty = Forensic reports and bureaucracy supplies
+
+borg-slot-medals-empty = Medal

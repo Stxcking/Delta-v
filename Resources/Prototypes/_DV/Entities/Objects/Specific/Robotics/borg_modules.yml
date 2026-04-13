@@ -489,6 +489,40 @@
 # Service Modules
 
 - type: entity
+  id: BaseBorgModuleServiceDV
+  parent: BaseBorgModuleService
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
+  - type: Item
+    inhandVisuals:
+      left:
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-icon-inhand-left
+        color: "#e6d2d2"
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-module-inhand-left
+        color: "#508242"
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-part-inhand-left
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-stripes-inhand-left
+        color: "#275e2a"
+      right:
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-icon-inhand-right
+        color: "#e6d2d2"
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-module-inhand-right
+        color: "#508242"
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-part-inhand-right
+      - sprite: Objects/Specific/Robotics/borgmodule.rsi
+        state: base-stripes-inhand-right
+        color: "#275e2a"
+
+- type: entity
   id: BorgModuleBureaucracy
   parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
   name: bureaucracy cyborg module
@@ -553,3 +587,33 @@
     - item: RubberStampDenied
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-bureaucracy-module }
+
+- type: entity
+  id: BorgModuleBoxing
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: boxing cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-boxing
+  - type: ItemBorgModule
+    hands:
+    - item: ClothingHandsGlovesBoxingRedBorg
+    - item: Gauze
+      hand:
+        emptyLabel: borg-slot-topicals-empty
+        emptyRepresentative: Gauze
+        whitelist:
+          tags:
+          - Gauze
+    - hand:
+        emptyLabel: borg-slot-medals-empty
+        emptyRepresentative: ClothingNeckGoldmedal
+        whitelist:
+          tags:
+          - Medal
+    - item: Whistle
+    - item: BoxingBellBorg
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-boxing-module }

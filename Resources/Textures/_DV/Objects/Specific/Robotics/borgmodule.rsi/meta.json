@@ -84,6 +84,12 @@
         },
         {
             "name": "icon-detective"
+        },
+        {
+            "name": "service"
+        },
+        {
+            "name": "icon-boxing"
         }
     ]
 }

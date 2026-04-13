@@ -295,3 +295,8 @@
   parent: BaseBorgModuleRecipe
   id: BorgModuleBureaucracy
   result: BorgModuleBureaucracy
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleBoxing
+  result: BorgModuleBoxing
