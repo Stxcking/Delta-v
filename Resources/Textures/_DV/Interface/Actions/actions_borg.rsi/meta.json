@@ -54,6 +54,9 @@
         },
         {
             "name": "detective-module"
+        },
+        {
+            "name": "service-bureaucracy-module"
         }
     ]
 }

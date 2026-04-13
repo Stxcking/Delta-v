@@ -248,7 +248,7 @@
 
   defaultModules:
   - BorgModuleMusique
-  - BorgModuleService
+#  - BorgModuleService # DeltaV - Rework Service Borg
   - BorgModuleClowning
   - BorgModuleGardening
   - BorgModuleHarvesting

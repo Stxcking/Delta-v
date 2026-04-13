@@ -289,3 +289,6 @@
 
 - type: Tag
   id: GenderCloak
+
+- type: Tag # Service Paperwork Module
+  id: Stamp

@@ -485,3 +485,71 @@
   - type: Sprite
     sprite: Objects/Tools/access_breaker.rsi # Finally using this awesome icon
     state: icon
+
+# Service Modules
+
+- type: entity
+  id: BorgModuleBureaucracy
+  parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
+  name: bureaucracy cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-pen
+  - type: ItemBorgModule
+    hands:
+    - item: LuxuryPen
+    - item: Paper
+      hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: Paper
+        whitelist:
+          tags:
+          - Book
+          - Dice
+          - Document
+          - Figurine
+          - TabletopBoard
+          - Write
+    - item: BoxFolderClipboardThreePapers
+      hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: BoxFolderClipboardEmpty
+        whitelist:
+          tags:
+          - Book
+          - Dice
+          - Document
+          - Figurine
+          - TabletopBoard
+          - Write
+    - item: PaperBin20
+    - hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: d20Dice
+        whitelist:
+          tags:
+          - Book
+          - Dice
+          - Document
+          - Figurine
+          - TabletopBoard
+          - Write
+    - hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: BookBase
+        whitelist:
+          tags:
+          - Book
+          - Dice
+          - Document
+          - Figurine
+          - TabletopBoard
+          - Write
+    - item: BooksBag
+    - item: HandLabeler
+    - item: RubberStampApproved
+    - item: RubberStampDenied
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-bureaucracy-module }

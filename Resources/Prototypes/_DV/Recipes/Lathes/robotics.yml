@@ -288,3 +288,10 @@
     Silver: 100
     Plasma: 500
     Bluespace: 300
+
+# Service Modules
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleBureaucracy
+  result: BorgModuleBureaucracy
