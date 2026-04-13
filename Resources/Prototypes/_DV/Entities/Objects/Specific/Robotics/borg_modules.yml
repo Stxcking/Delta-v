@@ -743,7 +743,7 @@
           - Produce
           tags:
           - Ingredients
-          - Fruits
+          - Fruit
           - Vegetable
     - hand:
         emptyLabel: borg-slot-food-empty
@@ -788,7 +788,7 @@
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-chef-module }
 
 - type: entity
-  id: BorgAdvancedModuleChef
+  id: BorgModuleAdvancedChef
   parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
   name: advanced chef cyborg module
   components:
@@ -815,7 +815,7 @@
           - Produce
           tags:
           - Ingredients
-          - Fruits
+          - Fruit
           - Vegetable
     - hand:
         emptyLabel: borg-slot-food-empty
@@ -845,3 +845,103 @@
           - Skewer
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-adv-chef-module }
+
+- type: entity
+  id: BorgModuleBartender
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: bartender cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-bar
+  - type: ItemBorgModule
+    hands:
+    - item: DrinkShaker
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: DrinkShaker
+        whitelist:
+          components:
+          - Shakeable
+    - item: BarSpoon
+      hand:
+        emptyLabel: borg-slot-injector-dropper-empty
+        emptyRepresentative: BarSpoon
+        whitelist:
+          components:
+          - ReactionMixer
+    - item: Skimmer
+      hand:
+        emptyLabel: borg-slot-injector-dropper-empty
+        emptyRepresentative: Skimmer
+        whitelist:
+          tags:
+          - Dropper
+    - hand:
+        emptyLabel: borg-slot-drinkbottle-empty
+        emptyRepresentative: DrinkVodkaBottleFull
+        whitelist:
+          tags:
+          - DrinkBottle
+    - item: DrinkGlass
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          components:
+          - FitsInDispenser
+    - item: DrinkGlass
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          components:
+          - FitsInDispenser
+    - item: RagItem
+    - item: HandLabeler
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-bar-module }
+
+- type: entity
+  id: BorgModuleAdvancedBartender
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
+  name: advanced bartender cyborg module
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-adv-bar
+  - type: ItemBorgModule
+    hands:
+    - item: DrinkShaker
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          components:
+          - FitsInDispenser
+    - item: BoozeDispenserBorg
+    - item: SodaDispenserBorg
+    - hand:
+        emptyLabel: borg-slot-drinkbottle-empty
+        emptyRepresentative: DrinkVodkaBottleFull
+        whitelist:
+          tags:
+          - DrinkBottle
+    - item: DrinkGlass
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          components:
+          - FitsInDispenser
+    - item: DrinkGlass
+      hand:
+        emptyLabel: borg-slot-small-containers-empty
+        emptyRepresentative: DrinkGlass
+        whitelist:
+          components:
+          - FitsInDispenser
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-adv-bar-module }

@@ -10,11 +10,12 @@ borg-slot-pka-upgrade-empty = PKA upgrades
 
 borg-slot-forensic-empty = Forensic reports and bureaucracy supplies
 
-borg-slot-medals-empty = medal slot
-borg-slot-produce-empty = seeds or plants slot
-borg-slot-swabs-empty = swab slot
-borg-slot-dinnerware-empty = dinnerware slot
-borg-slot-kitchenware-empty = kitchenware slot
-borg-slot-ingredients-empty = ingredients slot
-borg-slot-condiments-empty = condiments slot
-borg-slot-food-empty = food slot
+borg-slot-medals-empty = Medal slot
+borg-slot-produce-empty = Seeds or plants slot
+borg-slot-swabs-empty = Swab slot
+borg-slot-dinnerware-empty = Dinnerware slot
+borg-slot-kitchenware-empty = Kitchenware slot
+borg-slot-ingredients-empty = Ingredients slot
+borg-slot-condiments-empty = Condiments slot
+borg-slot-food-empty = Food slot
+borg-slot-drinkbottle-empty = Drink bottle slot

@@ -98,7 +98,6 @@
     sprite: _DV/Structures/Machines/advanced_microwave.rsi
     state: mw
   - type: Microwave
-    powerRequired: false
     cookTimeMultiplier: 0.5
     capacity: 30
     canMicrowaveIdsSafely: false
@@ -111,9 +110,6 @@
     needsPower: false
   - type: ActivatableUI
     key: enum.MicrowaveUiKey.Key
-  - type: DeviceNetwork
-    deviceNetId: Wireless
-    receiveFrequencyId: BasicDevice
   - type: WirelessNetworkConnection
     range: 200
   - type: UserInterface
@@ -133,16 +129,9 @@
   categories: [ DoNotMap ]
   description: A renewing flour bag that regenerates its contents!
   components:
-  - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.OpenableVisuals.Opened:
-        enum.OpenableVisuals.Layer:
-          True: {state: "flour-big_open"}
-          False: {state: "flour-big"}
-    layers:
-    - state: flour-big
-      map: ["enum.OpenableVisuals.Layer"]
+  - type: Sprite
+    sprite: Objects/Consumable/Food/ingredients.rsi
+    state: flour-big
   - type: SolutionContainerManager
     solutions:
       food:
@@ -157,3 +146,140 @@
       reagents:
       - ReagentId: Flour
         Quantity: 5
+
+- type: entity
+  id: BoozeDispenserBorg
+  parent: BaseItem
+  name: integrated soda dispenser
+  suffix: Borg
+  categories: [ DoNotMap ]
+  description: An integrated booze dispenser! Make drinks on the go.
+  components:
+  - type: Sprite
+    sprite: Structures/smalldispensers.rsi
+    state: booze
+  - type: ActivatableUI
+    key: enum.ReagentDispenserUiKey.Key
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.ReagentDispenserUiKey.Key:
+        type: ReagentDispenserBoundUserInterface
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+      beakerSlot: !type:ContainerSlot
+      outputSlot: !type:ContainerSlot
+  - type: SolutionContainerManager
+    solutions:
+      dispenser:
+        maxVol: 5000
+        canReact: true
+  - type: ReagentDispenser
+    beakerSlot:
+      whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
+      whitelist:
+        components:
+        - FitsInDispenser
+  - type: Storage
+    openOnActivate: false
+    whitelist:
+      components:
+      - FitsInDispenser
+      tags:
+      - DrinkBottle
+      - DrinkCan
+    maxItemSize: Normal
+    grid:
+    - 0,0,19,5
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 0
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DrinkAleBottleFullGrowler
+        - id: DrinkBeerGrowler
+        - id: DrinkCoffeeLiqueurBottleFull
+        - id: DrinkCognacBottleFull
+        - id: DrinkGinBottleFull
+        - id: DrinkMeadJug
+        - id: DrinkRumBottleFull
+        - id: DrinkTequilaBottleFull
+        - id: DrinkVermouthBottleFull
+        - id: DrinkVodkaBottleFull
+        - id: DrinkWhiskeyBottleFull
+        - id: DrinkWineBottleFull
+        - id: DrinkJaegermisterBottleFull
+
+- type: entity
+  parent: BaseItem
+  id: SodaDispenserBorg
+  name: integrated soda dispenser
+  suffix: Borg
+  categories: [ DoNotMap ]
+  description: An integrated soda dispenser! Make drinks on the go.
+  components:
+  - type: Sprite
+    sprite: Structures/smalldispensers.rsi
+    state: soda
+  - type: ActivatableUI
+    key: enum.ReagentDispenserUiKey.Key
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.ReagentDispenserUiKey.Key:
+        type: ReagentDispenserBoundUserInterface
+      enum.StorageUiKey.Key:
+        type: StorageBoundUserInterface
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+  - type: SolutionContainerManager
+    solutions:
+      dispenser:
+        maxVol: 5000
+  - type: ReagentDispenser
+    beakerSlot:
+      whitelistFailPopup: reagent-dispenser-component-cannot-put-entity-message
+      whitelist:
+        components:
+        - FitsInDispenser
+  - type: Storage
+    openOnActivate: false
+    whitelist:
+      tags:
+      - DrinkBottle
+      - DrinkCan
+    maxItemSize: Normal
+    grid:
+    - 0,0,19,5
+  - type: ApcPowerReceiver
+    needsPower: false
+    powerLoad: 0
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DrinkCoconutWaterJug
+        - id: DrinkCoffeeJug
+        - id: DrinkColaBottleFull
+        - id: DrinkCreamCartonXL
+        - id: DrinkDrGibbJug
+        - id: DrinkEnergyDrinkJug
+        - id: DrinkGreenTeaJug
+        - id: DrinkIceJug
+        - id: DrinkJuiceLimeCartonXL
+        - id: DrinkJuiceOrangeCartonXL
+        - id: DrinkLemonLimeJug
+        - id: DrinkRootBeerJug
+        - id: DrinkSodaWaterBottleFull
+        - id: DrinkSpaceMountainWindBottleFull
+        - id: DrinkSpaceUpBottleFull
+        - id: DrinkSugarJug
+        - id: DrinkTeaJug
+        - id: DrinkTonicWaterBottleFull
+        - id: DrinkWaterMelonJuiceJug

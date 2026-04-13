@@ -111,4 +111,5 @@
   id: BorgModulesServiceDynamicDV
   recipes:
   - BorgModuleAdvancedBotany
-  - BorgAdvancedModuleChef
+  - BorgModuleAdvancedChef
+  - BorgModuleAdvancedBartender

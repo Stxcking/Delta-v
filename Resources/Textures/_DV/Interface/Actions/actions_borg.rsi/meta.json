@@ -66,6 +66,12 @@
         },
         {
             "name": "service-adv-chef-module"
+        },
+        {
+            "name": "service-bar-module"
+        },
+        {
+            "name": "service-adv-bar-module"
         }
     ]
 }

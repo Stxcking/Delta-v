@@ -96,10 +96,15 @@
         },
         {
             "name": "icon-chef"
-        }
-,
+        },
         {
             "name": "icon-adv-chef"
+        },
+        {
+            "name": "icon-bar"
+        },
+        {
+            "name": "icon-adv-bar"
         }
     ]
 }

@@ -34,5 +34,5 @@
   tier: 2
   cost: 7000
   recipeUnlocks:
-  - BorgAdvancedModuleChef
-
+  - BorgModuleAdvancedChef
+  - BorgModuleAdvancedBartender
