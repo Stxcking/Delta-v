@@ -587,7 +587,25 @@
     - item: BooksBag
     - item: HandLabeler
     - item: RubberStampApproved
+      hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: RubberStampApproved
+        whitelist:
+          tags:
+          - Stamp
+          - Document
+          - Write
+          - Folder
     - item: RubberStampDenied
+      hand:
+        emptyLabel: borg-slot-documents-empty
+        emptyRepresentative: RubberStampDenied
+        whitelist:
+          tags:
+          - Stamp
+          - Document
+          - Write
+          - Folder
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-bureaucracy-module }
 
@@ -1088,37 +1106,3 @@
           - Instrument
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-dj-module }
-
-- type: entity
-  id: BorgModuleClowningDV
-  parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
-  name: clowning cyborg module
-  suffix: DV
-  components:
-  - type: Sprite
-    layers:
-    - state: service
-    - state: icon-clown
-  - type: ItemBorgModule
-    hands:
-    - item: BikeHorn
-    - item: ClownRecorder
-    - item: BikeHornInstrument
-    - item: Soap
-      hand:
-        emptyLabel: borg-slot-slip-empty
-        emptyRepresentative: TrashBananaPeel
-        whitelist:
-          tags:
-          - Soap
-          - BananaPeel
-    - item: FoodPieBananaCream
-      hand:
-        emptyLabel: borg-slot-pie-empty
-        emptyRepresentative: FoodPieBananaCream
-        whitelist:
-          tags:
-          - Pie
-          - Trash
-  - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: clowning-module }
