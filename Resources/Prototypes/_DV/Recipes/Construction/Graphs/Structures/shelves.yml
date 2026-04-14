@@ -1,0 +1,225 @@
+- type: constructionGraph
+  id: StandingShelves
+  start: start
+  graph:
+    - node: start
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: SmallWoodStandingShelf
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: WoodPlank
+              amount: 3
+              doAfter: 1
+        - to: SmallMetalStandingShelf
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 1
+        - to: LargeWoodStandingShelf
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: WoodPlank
+              amount: 4
+              doAfter: 1
+        - to: LargeMetalStandingShelf
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: Steel
+              amount: 4
+              doAfter: 2
+        - to: LargeWoodDrawerStandingShelf
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: WoodPlank
+              amount: 4
+              doAfter: 3
+        - to: MetalStandingShelfMedical
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: Glass
+              amount: 2
+              doAfter: 2
+            - material: Steel
+              amount: 4
+              doAfter: 4
+        - to: MetalStandingShelf
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: Steel
+              amount: 6
+              doAfter: 1
+        - to: FruitStand
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: WoodPlank
+              amount: 4
+              doAfter: 2
+        - to: FoodStand
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: Steel
+              amount: 5
+              doAfter: 2
+
+## Deconstruction
+# Small Shelves
+    - node: SmallWoodStandingShelf
+      entity: SmallWoodStandingShelf
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 6
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: SmallMetalStandingShelf
+      entity: SmallMetalStandingShelf
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+  # Large Shelves
+    - node: LargeWoodStandingShelf
+      entity: LargeWoodStandingShelf
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 12
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: LargeMetalStandingShelf
+      entity: LargeMetalStandingShelf
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 10
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: LargeWoodDrawerStandingShelf
+      entity: LargeWoodDrawerStandingShelf
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 5
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: MetalStandingShelfMedical
+      entity: MetalStandingShelfMedical
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 5
+            - !type:GivePrototype
+              prototype: SheetGlass1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+    - node: MetalStandingShelf
+      entity: MetalStandingShelf
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 6
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
+
+  # Stands
+    - node: FruitStand
+      entity: FruitStand
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: MaterialWoodPlank1
+              amount: 5
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 1
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: FoodStand
+      entity: FoodStand
+      edges:
+        - to: start
+          completed:
+            - !type:EmptyAllContainers
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 6
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Screwing
+              doAfter: 2
