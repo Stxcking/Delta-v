@@ -1075,3 +1075,36 @@
           - Instrument
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-dj-module }
+
+- type: entity
+  id: BorgModuleClowningDV
+  parent: [ BaseBorgModuleService, BaseProviderBorgModule ]
+  name: clowning cyborg module
+  suffix: DV
+  components:
+  - type: Sprite
+    layers:
+    - state: service
+    - state: icon-clown
+  - type: ItemBorgModule
+    hands:
+    - item: BikeHorn
+    - item: ClownRecorder
+    - item: BikeHornInstrument
+    - item: Soap
+      hand:
+        emptyLabel: borg-slot-slip-empty
+        emptyRepresentative: TrashBananaPeel
+        whitelist:
+          tags:
+          - Soap
+          - BananaPeel
+    - item: FoodPieBananaCream
+      hand:
+        emptyLabel: borg-slot-pie-empty
+        emptyRepresentative: FoodPieBananaCream
+        whitelist:
+          tags:
+          - Pie
+  - type: BorgModuleIcon
+    icon: { sprite: Interface/Actions/actions_borg.rsi, state: clowning-module }

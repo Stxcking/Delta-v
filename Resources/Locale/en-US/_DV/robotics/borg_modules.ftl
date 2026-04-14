@@ -21,3 +21,5 @@ borg-slot-food-empty = Food slot
 borg-slot-drinkbottle-empty = Drink bottle slot
 borg-slot-rod-empty = Fishing rod slot
 borg-slot-fish-empty = Fish slot
+borg-slot-slip-empty = Slipping slot
+borg-slot-pie-empty = Pie slot

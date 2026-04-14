@@ -97,6 +97,8 @@
   - BiofabricatorMachineCircuitboard
   - BiomassReclaimerMachineCircuitboard
   - AdvancedMicrowaveMachineCircuitBoard # DeltaV
+  - BorgModuleAdvancedChef # DeltaV
+  - BorgModuleAdvancedBartender # DeltaV
 
 # Tier 2
 
