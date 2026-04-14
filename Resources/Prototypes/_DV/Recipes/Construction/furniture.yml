@@ -427,6 +427,10 @@
   conditions:
     - !type:TileNotBlocked
 
+#region N14
+
+# N14 Stuffs - Wood Desks/Tables/Counters/Frame
+
 - type: construction
   id: N14WoodTableFrame
   graph: N14TableRecipes
@@ -438,8 +442,8 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+  hide: true
 
-# N14 Stuffs - Desks/Tables/Counters/Frame
 - type: construction
   id: N14MetalTableFrame
   graph: N14TableRecipes
@@ -451,12 +455,61 @@
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+  hide: true
 
 - type: construction
   id: N14TableDeskWood
   graph: N14TableRecipes
   startNode: start
   targetNode: N14DeskWood
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: AlignTileNonDense
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableDeskWoodMetal
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14DeskWoodMetal
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: AlignTileNonDense
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableDeskWoodSmall
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14DeskWoodSmall
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: AlignTileNonDense
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableCasinoPool
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14PoolTable
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: AlignTileNonDense
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableCasinoCards
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14CardsTable
   category: construction-category-furniture
   objectType: Structure
   placementMode: AlignTileNonDense
@@ -550,45 +603,6 @@
     - !type:TileNotBlocked
 
 - type: construction
-  id: N14TableCounterBend
-  name: structure-furniture-fancy-counter-corner
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14WoodCounterBend
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  id: N14TableCounterIntersect
-  name: structure-furniture-fancy-counter-junction
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14WoodCounterIntersect
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  id: N14TableCounterCross
-  name: structure-furniture-fancy-counter-cross
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14WoodCounterCross
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
   id: N14TableCounterCraft
   name: structure-furniture-shoddy-counter
   graph: N14TableRecipes
@@ -601,44 +615,33 @@
   conditions:
     - !type:TileNotBlocked
 
-- type: construction
-  id: N14TableCounterCraftBend
-  name: structure-furniture-shoddy-counter-corner
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14WoodCraftCounterBend
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
+# N14 Stuffs - Metal Desks/Tables/Counters/Frame
 
 - type: construction
-  id: N14TableCounterCraftIntersect
-  name: structure-furniture-shoddy-counter-junction
+  id: N14WoodFrame
   graph: N14TableRecipes
   startNode: start
-  targetNode: N14WoodCraftCounterIntersect
+  targetNode: N14WoodFrame
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+  hide: true
 
 - type: construction
-  id: N14TableCounterCraftCross
-  name: structure-furniture-shoddy-counter-cross
+  id: N14MetalFrame
   graph: N14TableRecipes
   startNode: start
-  targetNode: N14WoodCraftCounterCross
+  targetNode: N14MetalFrame
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
+  hide: true
 
 - type: construction
   id: N14TableMetalRound
@@ -653,50 +656,10 @@
     - !type:TileNotBlocked
 
 - type: construction
-  id: N14TableCounterMetal
-  name: structure-furniture-fancy-steel-counter
+  id: N14TableMetalRolling
   graph: N14TableRecipes
   startNode: start
-  targetNode: N14MetalCounter
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  id: N14TableCounterMetalBend
-  name: structure-furniture-fancy-steel-counter-corner
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14MetalCounterBend
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  id: N14TableMetalCounterIntersect
-  name: structure-furniture-fancy-steel-counter-junction
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14MetalCounterIntersect
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
-
-- type: construction
-  id: N14TableCounterMetalCross
-  name: structure-furniture-fancy-steel-counter-cross
-  graph: N14TableRecipes
-  startNode: start
-  targetNode: N14MetalCounterCross
+  targetNode: N14MetalRolling
   category: construction-category-furniture
   objectType: Structure
   placementMode: SnapgridCenter
@@ -716,7 +679,101 @@
   conditions:
     - !type:TileNotBlocked
 
-# N14 Chair
+- type: construction
+  id: N14TableDeskMetalLegs
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14DeskMetalLegs
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: AlignTileNonDense
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableDeskMetalSmall
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14DeskMetalSmall
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: AlignTileNonDense
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableCounterMetal
+  name: structure-furniture-fancy-steel-counter
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: N14MetalCounter
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14TableMetalGrate
+  graph: N14TableRecipes
+  startNode: start
+  targetNode: TableMetalGrate
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+# N14 Chairs
+- type: construction
+  id: N14ChairArmchair
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairArmchair
+  category: construction-category-furniture
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14ChairOfficeErgonomic
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairErgonomic
+  category: construction-category-furniture
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14ChairDiner
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairDiner
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14ChairCaptain
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairCaptain
+  category: construction-category-furniture
+  objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
 - type: construction
   id: N14ChairRetro
   graph: N14Seat
@@ -724,8 +781,56 @@
   targetNode: N14ChairRetro
   category: construction-category-furniture
   objectType: Structure
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14ChairDinerLeft
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairDinerLeft
+  category: construction-category-furniture
+  objectType: Structure
   placementMode: SnapgridCenter
   canBuildInImpassable: false
   conditions:
     - !type:TileNotBlocked
-  hide: false
+
+- type: construction
+  id: N14ChairDinerRight
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairDinerRight
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14ChairDinerCornerLeft
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairDinerCornerLeft
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+- type: construction
+  id: N14ChairDinerCornerRight
+  graph: N14Seat
+  startNode: start
+  targetNode: N14ChairDinerCornerRight
+  category: construction-category-furniture
+  objectType: Structure
+  placementMode: SnapgridCenter
+  canBuildInImpassable: false
+  conditions:
+    - !type:TileNotBlocked
+
+#endregion

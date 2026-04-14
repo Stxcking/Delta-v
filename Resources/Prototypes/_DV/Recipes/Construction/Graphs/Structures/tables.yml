@@ -4,115 +4,283 @@
   graph:
     - node: start
       actions:
-        - !type:DeleteEntity
+        - !type:DestroyEntity {}
       edges:
         - to: N14WoodFrame
+          completed:
+            - !type:SnapToGrid
           steps:
             - material: WoodPlank
               amount: 2
               doAfter: 2
         - to: N14MetalFrame
+          completed:
+            - !type:SnapToGrid
           steps:
             - material: Steel
               amount: 2
               doAfter: 2
-        - to: N14DeskWood
+        - to: N14WoodSquare
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+        - to: N14WoodRound
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+        - to: N14WoodStand
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+        - to: N14WoodLow
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+        - to: N14MetalRolling
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
             - material: Steel
-              amount: 6
+              amount: 3
+              doAfter: 2
+
+# Wooden Tables with Frame
+    - node: N14WoodFrame
+      entity: N14WoodTableFrame
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: N14DeskWood
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 2
             - material: WoodPlank
+              amount: 3
+              doAfter: 3
+
+        - to: N14DeskWoodMetal
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: Steel
+              amount: 2
+              doAfter: 1
+            - material: WoodPlank
+              amount: 3
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 2
+
+        - to: N14DeskWoodSmall
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
               amount: 4
-              doAfter: 5
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 2
+            - material: WoodPlank
+              amount: 3
+              doAfter: 3
+
         - to: N14WoodWideOval
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
             - material: WoodPlank
-              amount: 6
-              doAfter: 4
+              amount: 3
+              doAfter: 3
+
         - to: N14WoodSquareWide
           completed:
             - !type:SnapToGrid
               southRotation: true
           steps:
             - material: WoodPlank
-              amount: 6
-              doAfter: 4
-        - to: N14DeskMetal
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 2
+            - material: WoodPlank
+              amount: 1
+              doAfter: 1
+
+        - to: N14PoolTable
           completed:
             - !type:SnapToGrid
           steps:
             - material: Steel
-              amount: 7
-              doAfter: 5
-        - to: N14WoodSquare
-          completed:
-            - !type:SnapToGrid
-          steps:
-            - material: WoodPlank
               amount: 2
+              doAfter: 1
+            - material: MetalRod
+              amount: 2
+              doAfter: 1
+            - material: WoodPlank
+              amount: 3
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 2
+            - material: Cloth
+              amount: 4
               doAfter: 1
 
-        - to: N14WoodRound
+        - to: N14CardsTable
           completed:
             - !type:SnapToGrid
           steps:
+            - material: MetalRod
+              amount: 4
+              doAfter: 1
             - material: WoodPlank
-              amount: 2
+              amount: 3
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 2
+            - material: Cloth
+              amount: 4
               doAfter: 1
 
-        - to: N14WoodLow
+# Metal Tables with Frame
+    - node: N14MetalFrame
+      entity: N14MetalTableFrame
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: N14DeskMetal
           completed:
             - !type:SnapToGrid
           steps:
-            - material: WoodPlank
+            - material: MetalRod
               amount: 2
               doAfter: 1
+            - tool: Screwing
+              doAfter: 2
+            - material: Steel
+              amount: 6
+              doAfter: 4
 
-        - to: N14WoodStand
+        - to: N14DeskMetalLegs
           completed:
             - !type:SnapToGrid
           steps:
-            - material: WoodPlank
+            - material: MetalRod
+              amount: 4
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 2
+            - material: Steel
+              amount: 4
+              doAfter: 4
+
+        - to: N14DeskMetalSmall
+          completed:
+            - !type:SnapToGrid
+          steps:
+            - material: MetalRod
               amount: 2
               doAfter: 1
+            - tool: Screwing
+              doAfter: 2
+            - material: Steel
+              amount: 4
+              doAfter: 4
 
         - to: N14MetalRound
           completed:
             - !type:SnapToGrid
+              southRotation: true
           steps:
-          - material: Steel
-            amount: 2
-            doAfter: 1
+            - material: Steel
+              amount: 2
+              doAfter: 1
+
+        - to: N14MetalRolling
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 2
+
+        - to: N14MetalCounterFrame
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+
+# Counters
+    - node: N14WoodCounterFrame
+      entity: N14WoodCounterFrame
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: N14WoodCounter
+          steps:
+            - material: WoodPlank
+              amount: 1
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
 
         - to: N14WoodCraftCounter
           steps:
             - material: WoodPlank
-              amount: 2
+              amount: 1
+              doAfter: 1
             - material: FloorTileWoodLarge
               amount: 2
-              doAfter: 3
+              doAfter: 1
 
-        - to: N14WoodCraftCounterBend
+    - node: N14MetalCounterFrame
+      entity: N14MetalCounterFrame
+      actions:
+        - !type:DestroyEntity {}
+      edges:
+        - to: N14MetalCounter
           steps:
-            - material: FloorTileWoodLarge
-              amount: 2
-              doAfter: 3
-            - material: WoodPlank
-              amount: 2
+            - material: Steel
+              amount: 1
+            - tool: Screwing
+              doAfter: 1
 
-        - to: N14WoodCraftCounterIntersect
+        - to: TableMetalGrate
           steps:
-            - material: FloorTileWoodLarge
-              amount: 6
-              doAfter: 3
-            - material: WoodPlank
-              amount: 2
+            - material: MetalRod
+              amount: 4
+              doAfter: 1
 
+#region Deconstruction
+# Small Tables
     - node: N14WoodFrame
       entity: N14WoodTableFrame
       edges:
@@ -126,73 +294,18 @@
             - tool: Prying
               doAfter: 1
 
-        - to: N14WoodCounter
-          steps:
-            - material: WoodPlank
-              amount: 4
-              doAfter: 0.5
-            - tool: Screwing
-              doAfter: 1
-
-        - to: N14WoodCounterBend
-          steps:
-            - tool: Anchoring
-              doAfter: 1
-            - material: WoodPlank
-              amount: 4
-              doAfter: 1
-            - tool: Screwing
-              doAfter: 1
-
-        - to: N14WoodCounterIntersect
-          steps:
-            - tool: Screwing
-              doAfter: 1
-            - material: WoodPlank
-              amount: 6
-              doAfter: 0.5
-            - tool: Screwing
-              doAfter: 1.5
-
     - node: N14MetalFrame
       entity: N14MetalTableFrame
       edges:
-      - to: start
-        completed:
-          - !type:SpawnPrototype
-            prototype: SheetSteel1
-            amount: 2
-          - !type:DeleteEntity
-        steps:
-          - tool: Prying
-            doAfter: 1
-
-      - to: N14MetalCounter
-        steps:
-          - material: Steel
-            amount: 4
-            doAfter: 1
-          - tool: Welding
-            doAfter: 1
-
-      - to: N14MetalCounterBend
-        steps:
-          - tool: Anchoring
-            doAfter: 1
-          - material: Steel
-            amount: 4
-            doAfter: 1
-          - tool: Welding
-            doAfter: 1
-
-      - to: N14MetalCounterIntersect
-        steps:
-          - tool: Welding
-            doAfter: 1.75
-          - material: Steel
-            amount: 6
-            doAfter: 1
-
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:DeleteEntity
+          steps:
+            - tool: Prying
+              doAfter: 1
 
     - node: N14WoodSquare
       entity: N14TableWoodSquare
@@ -202,9 +315,8 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
-            - !type:DeleteEntity
           steps:
-            - tool: Anchoring
+            - tool: Prying
               doAfter: 1
 
     - node: N14WoodRound
@@ -215,7 +327,6 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
-            - !type:DeleteEntity
           steps:
             - tool: Prying
               doAfter: 1
@@ -228,7 +339,6 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
-            - !type:DeleteEntity
           steps:
             - tool: Prying
               doAfter: 1
@@ -241,132 +351,21 @@
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 2
-            - !type:DeleteEntity
           steps:
             - tool: Prying
               doAfter: 1
 
-    - node: N14WoodCounter
-      entity: N14TableCounter
-      edges:
-        - to: N14WoodFrame
-          completed:
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 4
-          steps:
-            - tool: Prying
-              doAfter: 3
-
-    - node: N14WoodCounterBend
-      entity: N14TableCounterBend
-      edges:
-        - to: N14WoodFrame
-          completed:
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 4
-          steps:
-            - tool: Prying
-              doAfter: 3
-
-    - node: N14WoodCounterIntersect
-      entity: N14TableCounterIntersect
-      edges:
-        - to: N14WoodFrame
-          completed:
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 6
-          steps:
-            - tool: Prying
-              doAfter: 4
-        - to: N14WoodCounterCross
-          steps:
-            - material: WoodPlank
-              amount: 4
-              doAfter: 0.5
-            - tool: Screwing
-              doAfter: 2.5
-
-    - node: N14WoodCounterCross
-      entity: N14TableCounterCross
-      edges:
-        - to: N14WoodCounterIntersect
-          completed:
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 4
-          steps:
-            - tool: Prying
-              doAfter: 3
-
-    - node: N14WoodCraftCounter
-      entity: N14TableCounterCraft
+    - node: N14MetalRolling
+      entity: N14TableMetalRolling
       edges:
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: FloorTileItemWoodLarge
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 2
-            - !type:DeleteEntity
-          steps:
-            - tool: Prying
-              doAfter: 3
-
-    - node: N14WoodCraftCounterBend
-      entity: N14TableCounterCraftBend
-      edges:
-        - to: start
-          completed:
-            - !type:SpawnPrototype
-              prototype: FloorTileItemWoodLarge
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 2
-            - !type:DeleteEntity
-          steps:
-            - tool: Prying
-              doAfter: 3
-
-    - node: N14WoodCraftCounterIntersect
-      entity: N14TableCounterCraftIntersect
-      edges:
-        - to: start
-          completed:
-            - !type:SpawnPrototype
-              prototype: FloorTileItemWoodLarge
-              amount: 6
-            - !type:SpawnPrototype
-              prototype: MaterialWoodPlank1
-              amount: 2
-            - !type:DeleteEntity
-          steps:
-            - tool: Prying
-              doAfter: 3
-        - to: N14WoodCraftCounterCross
-          steps:
-            - material: FloorTileWoodLarge
+              prototype: SheetSteel1
               amount: 4
+          steps:
+            - tool: Prying
               doAfter: 1
-            - tool: Screwing
-              doAfter: 1.75
-
-    - node: N14WoodCraftCounterCross
-      entity: N14TableCounterCraftCross
-      edges:
-        - to: N14WoodCraftCounterIntersect
-          completed:
-            - !type:SpawnPrototype
-              prototype: FloorTileItemWoodLarge
-              amount: 4
-          steps:
-            - tool: Prying
-              doAfter: 2
 
     - node: N14MetalRound
       entity: N14TableMetalRound
@@ -376,137 +375,252 @@
             - !type:SpawnPrototype
               prototype: SheetSteel1
               amount: 2
-            - !type:DeleteEntity
           steps:
-            - tool: Welding
+            - tool: Prying
               doAfter: 1
 
-
-    - node: N14MetalCounter
-      entity: N14TableCounterMetal
-      edges:
-        - to: N14MetalFrame
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 4
-          steps:
-            - tool: Welding
-              doAfter: 3
-            - tool: Prying
-              doAfter: 2
-
-
-    - node: N14MetalCounterBend
-      entity: N14TableCounterMetalBend
-      edges:
-        - to: N14MetalFrame
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 4
-          steps:
-            - tool: Welding
-              doAfter: 3
-            - tool: Prying
-              doAfter: 2
-
-    - node: N14MetalCounterIntersect
-      entity: N14TableCounterMetalIntersect
-      edges:
-        - to: N14MetalFrame
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 6
-          steps:
-            - tool: Welding
-              doAfter: 4
-            - tool: Anchoring
-              doAfter: 3
-
-        - to: N14MetalCounterCross
-          steps:
-            - material: Steel
-              amount: 4
-              doAfter: 1
-            - tool: Welding
-              doAfter: 2
-
-
-    - node: N14MetalCounterCross
-      entity: N14TableCounterMetalCross
-      edges:
-        - to: N14MetalCounterIntersect
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 4
-          steps:
-            - tool: Welding
-              doAfter: 2
-            - tool: Prying
-              doAfter: 2
-
-
+# Tables/Desk
     - node: N14WoodWideOval
       entity: N14TableWoodenOvalWide
       edges:
-        - to: start
+        - to: N14WoodFrame
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 6
-            - !type:DeleteEntity
           steps:
             - tool: Prying
               doAfter: 3
-
 
     - node: N14WoodSquareWide
       entity: N14TableWoodenSquareWide
       edges:
-        - to: start
+        - to: N14WoodFrame
           completed:
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 6
-            - !type:DeleteEntity
           steps:
             - tool: Prying
               doAfter: 3
 
-
     - node: N14DeskWood
       entity: N14TableDeskWood
       edges:
-        - to: start
+        - to: N14WoodFrame
           completed:
+            - !type:EmptyAllContainers
             - !type:SpawnPrototype
               prototype: MaterialWoodPlank1
               amount: 4
             - !type:SpawnPrototype
               prototype: SheetSteel1
-              amount: 6
-            - !type:DeleteEntity
+              amount: 1
           steps:
             - tool: Prying
               doAfter: 4
-            - tool: Welding
+            - tool: Screwing
               doAfter: 4
 
+    - node: N14DeskWoodMetal
+      entity: N14TableDeskWoodMetal
+      edges:
+        - to: N14WoodFrame
+          completed:
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 3
+          steps:
+            - tool: Prying
+              doAfter: 4
+            - tool: Screwing
+              doAfter: 2
+
+    - node: N14DeskWoodSmall
+      entity: N14TableDeskWoodSmall
+      edges:
+        - to: N14WoodFrame
+          completed:
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 3
+            - tool: Screwing
+              doAfter: 1
 
     - node: N14DeskMetal
       entity: N14TableDeskMetal
       edges:
-        - to: start
+        - to: N14MetalFrame
           completed:
-          - !type:SpawnPrototype
-            prototype: SheetSteel1
-            amount: 7
-          - !type:DeleteEntity
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 7
           steps:
             - tool: Welding
-              doAfter: 5
+              doAfter: 2
             - tool: Prying
               doAfter: 4
+
+    - node: N14DeskMetalLegs
+      entity: N14TableDeskMetalLegs
+      edges:
+        - to: N14MetalFrame
+          completed:
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 6
+          steps:
+            - tool: Welding
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 2
+
+    - node: N14DeskMetalSmall
+      entity: N14TableDeskMetalSmall
+      edges:
+        - to: N14MetalFrame
+          completed:
+            - !type:EmptyAllContainers
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 6
+          steps:
+            - tool: Welding
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 2
+
+    - node: N14PoolTable
+      entity: N14TableCasinoPool
+      edges:
+        - to: N14WoodFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 2
+            - tool: Screwing
+              doAfter: 2
+
+    - node: N14CardsTable
+      entity: N14TableCasinoCards
+      edges:
+        - to: N14WoodFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 4
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 4
+          steps:
+            - tool: Screwing
+              doAfter: 2
+            - tool: Prying
+              doAfter: 4
+
+# Counters
+    - node: N14WoodCounterFrame
+      entity: N14WoodCounterFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 2
+            - !type:DeleteEntity {}
+          steps:
+            - tool: Prying
+              doAfter: 1
+
+    - node: N14WoodCounter
+      entity: N14TableCounter
+      edges:
+        - to: N14WoodCounterFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: N14WoodCraftCounter
+      entity: N14TableCounterCraft
+      edges:
+        - to: N14WoodCounterFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: FloorTileItemWoodLarge
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: MaterialWoodPlank1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: N14MetalCounterFrame
+      entity: N14MetalCounterFrame
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 1
+            - tool: Screwing
+              doAfter: 1
+
+    - node: N14MetalCounter
+      entity: N14TableCounterMetal
+      edges:
+        - to: N14MetalCounterFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 1
+          steps:
+            - tool: Prying
+              doAfter: 2
+
+    - node: TableMetalGrate
+      entity: N14TableMetalGrate
+      edges:
+        - to: N14MetalCounterFrame
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+          steps:
+            - tool: Prying
+              doAfter: 2
+

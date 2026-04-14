@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "license": "CC-BY-NC-SA-3.0",
+    "copyright": "Taken from MS13 at commit https://github.com/Mojave-Sun/mojave-sun-13/commit/176be184d511dd4f85585e3a62f0cf524b4e1d9b, metal and wood sprites by Mithrandalf for N14, resprited and open state by @Stxcking (github).",
+    "size": {
+        "x": 64,
+        "y": 64
+    },
+    "states": [
+        {
+            "name": "base",
+            "directions": 4
+        },
+        {
+            "name": "opened",
+            "directions": 4
+        }
+    ]
+}
