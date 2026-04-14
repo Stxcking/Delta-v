@@ -1,0 +1,58 @@
+- type: entity
+  parent: BaseMaterialDoor
+  id: DoorBarCell
+  name: bar cell door
+  description: A basic detention cell door made of bars.
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Doors/bar_cell.rsi
+    snapCardinals: true
+  - type: AnimationPlayer
+  - type: Door
+    occludes: false
+    openSound:
+      path: /Audio/_Nuclear14/Effects/Doors/DRS_Metal_Jail_Swing_Close_01.ogg
+    closeSound:
+      path: /Audio/_Nuclear14/Effects/Doors/DRS_Metal_Jail_Swing_Open_01.ogg
+  - type: Occluder
+    enabled: false
+  - type: Damageable
+    damageContainer: StructuralInorganic
+    damageModifierSet: StrongMetallic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalSlam
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 5
+            max: 10
+
+
+- type: entity
+  parent: DoorBarCell
+  id: DoorBarCellLocked
+  suffix: Locked
+  description: A detention cell door with basic security access restrictions.
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: DoorBarCell
+  id: DoorBarCellCommandLocked
+  suffix: Command Secured
+  description: A detention cell door restricted to command-level access.
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsCommand ]

@@ -37,100 +37,18 @@
     graph: N14RugMatRecipe # DeltaV
     node: matBlank # DeltaV
 
-- type: entity
-  parent: N14CarpetSingleBase # DeltaV
-  id: N14RugMatWelcome
-  name: welcome mat # DeltaV
-  components:
-  - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs.rsi # DeltaV
-    state: mat_welcome
-  - type: Construction # DeltaV
-    graph: N14RugMatWelcomeRecipe # DeltaV
-    node: matWelcome # DeltaV
-
-- type: entity
-  parent: N14RugMat
-  id: N14RugMatVulgar1
-  suffix: get f
-  description: A charming floor mat.
-  components:
-  - type: Sprite
-    state: mat_vulgar
-
-- type: entity
-  parent: N14RugMatVulgar1
-  id: N14RugMatVulgar2
-  suffix: f off
-  components:
-  - type: Sprite
-    state: mat_vulgar_2
-
-- type: entity
-  parent: N14RugMatVulgar1
-  id: N14RugMatTown
-  suffix: s town
-  components:
-  - type: Sprite
-    state: mat_town
-
-- type: entity
-  parent: N14RugMatVulgar1
-  id: N14RugMatNCR
-  suffix: ncr sucks
-  components:
-  - type: Sprite
-    state: mat_ncr
-
-- type: entity
-  parent: N14RugMatVulgar1
-  id: N14RugMatBOS
-  suffix: bos sucks
-  components:
-  - type: Sprite
-    state: mat_bos
-
-# Rubber mats
-- type: entity
-  parent: N14RugMat
-  id: N14RugMatRubberSingle
-  name: rubber mat
-  description: A rubber protective floor mat.
-  components:
-  - type: Sprite
-    state: rubber_single
-
-- type: entity
-  parent: N14RugMatRubberSingle
-  id: N14RugMatRubber1
-  components:
-  - type: Sprite
-    state: rubber_1
-
-- type: entity
-  parent: N14RugMatRubberSingle
-  id: N14RugMatRubber2
-  components:
-  - type: Sprite
-    state: rubber_2
-
-- type: entity
-  parent: N14RugMatRubberSingle
-  id: N14RugMatRubber3
-  components:
-  - type: Sprite
-    state: rubber_3
-
 # 64x64 rugs
 - type: entity
   id: N14RugBlue
   parent: N14CarpetSingleBase # DeltaV
   name: blue rug # DeltaV
   description: A modern looking blue rug.
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
-    state: rug_blue
+    sprite: _DV/Structures/Decoration/rugs.rsi
+    state: blue
   - type: Construction # Begin DeltaV Additions
     graph: N14RugRecipes
     node: blueRug
@@ -150,27 +68,16 @@
             max: 4 # End DeltaV Additions
 
 - type: entity
-  id: N14RugShag # Delta V
-  parent: N14RugBlue
-  name: blue shag rug # DeltaV 
-  description: A blue shag rug. Looks cheap. # DeltaV 
-  components:
-  - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
-    state: rug_blue_shag
-  - type: Construction # DeltaV
-    graph: N14RugRecipes # DeltaV
-    node: rugShag # DeltaV
-
-- type: entity
   id: N14RugBrown
   parent: N14RugBlue
-  name: brown rug
-  description: A fancy looking brown rug. 
+  name: purple rug
+  description: A fancy looking purple rug.
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
-    state: rug_fancy
+    sprite: _DV/Structures/Decoration/rugs.rsi
+    state: purple
   - type: Construction # Begin DeltaV Additions
     graph: N14RugRecipes
     node: brownRug
@@ -195,10 +102,12 @@
   parent: N14RugBlue # DeltaV
   name: red rug # DeltaV
   description: A fancily patterned red rug. Looks expensive. # DeltaV
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
-    state: rug_red
+    sprite: _DV/Structures/Decoration/rugs.rsi
+    state: red
   - type: Construction # Begin DeltaV Additions
     graph: N14RugRecipes
     node: redRug
@@ -222,10 +131,12 @@
   parent: N14RugBlue
   name: orange rug
   description: A patterned orange rug.
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
-    state: rug_yellow
+    sprite: _DV/Structures/Decoration/rugs.rsi
+    state: yellow
   - type: Construction # Begin DeltaV Additions
     graph: N14RugRecipes
     node: orangeRug
@@ -245,6 +156,8 @@
   parent: N14RugBlue
   name: rubber mat
   description: A large laboratory-grade rubber mat. Feel safe as you spill acid on yourself!
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
     sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
@@ -262,4 +175,3 @@
             SheetPlastic:
               min: 4
               max: 4 # End DeltaV Additions
- 

@@ -9,20 +9,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-  hide: false
-
-- type: construction
-  id: N14RugMatWelcome
-  graph: N14RugMatWelcomeRecipe
-  startNode: start
-  targetNode: matWelcome
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
-  hide: false
 
 - type: construction
   id: N14RugBlue
@@ -35,7 +21,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-  hide: false
 
 - type: construction
   id: N14RugBrown
@@ -48,7 +33,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-  hide: false
 
 - type: construction
   id: N14RugRed
@@ -61,7 +45,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-  hide: false
 
 - type: construction
   id: N14RugYellow
@@ -74,7 +57,6 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-  hide: false
 
 - type: construction
   id: N14RugMatRubberLarge
@@ -87,17 +69,3 @@
   canBuildInImpassable: false
   conditions:
   - !type:TileNotBlocked
-  hide: false
-
-- type: construction
-  id: N14RugShag
-  graph: N14RugRecipes
-  startNode: start
-  targetNode: rugShag
-  category: construction-category-furniture
-  objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
-  hide: false
