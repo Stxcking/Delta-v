@@ -3,53 +3,122 @@
   id: N14ChairArmchair
   name: armchair
   description: A padded armchair.
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/chairs.rsi
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi
     state: armchair
   - type: Construction
     graph: N14Seat
     node: N14ChairArmchair
 
 - type: entity
-  parent: StoolBase # DeltaV - so it can swivel
+  parent: StoolBase # so it can swivel
   id: N14ChairBarRetro
   name: retro chair
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/chairs.rsi
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi
     state: retro_chair
-  - type: Construction # Begin DeltaV Additions
-    graph: N14Seat 
-    node: N14ChairRetro # End DeltaV Additions
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairRetro
 
 - type: entity
-  id: N14ChairDinerBench
-  parent: ChairBase # DeltaV
+  parent: ChairBase
+  id: N14ChairDiner
   name: diner chair
   description: A cozy diner chair.
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/chairs.rsi
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair.rsi
     state: diner_chair
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairDiner
 
 - type: entity
+  parent: OfficeChairBase
   id: N14ChairOfficeErgonomic
   name: ergonomic office chair
-  parent: OfficeChairBase # DeltaV - furniture rework
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/chairs.rsi # DeltaV - furniture rework
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi
     state: ergo_chair
-  - type: Construction # DeltaV
-    graph: N14Seat # DeltaV
-    node: N14ChairErgonomic # DeltaV - furniture rework
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairErgonomic
 
 - type: entity
-  parent: N14ChairBarRetro
+  parent: OfficeChairBase
   id: N14ChairCaptain
   name: captain chair
   description: A chair fit for a captain.
+  placement:
+    mode: PlaceFree
   components:
   - type: Sprite
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi
     state: captain_chair
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairCaptain
+
+- type: entity
+  parent: N14ChairDiner
+  id: N14ChairDinerLeft
+  name: diner chair
+  suffix: Left
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair.rsi
+    state: diner_chair_left
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairDinerLeft
+
+- type: entity
+  parent: N14ChairDiner
+  id: N14ChairDinerRight
+  name: diner chair
+  suffix: Right
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair.rsi
+    state: diner_chair_right
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairDinerRight
+
+- type: entity
+  parent: N14ChairDiner
+  id: N14ChairDinerCornerLeft
+  name: diner chair
+  suffix: Left
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair_corner.rsi
+    layers:
+    - state: left
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairDinerCornerLeft
+
+- type: entity
+  parent: N14ChairDiner
+  id: N14ChairDinerCornerRight
+  name: diner chair
+  suffix: Right
+  components:
+  - type: Sprite
+    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair_corner.rsi
+    layers:
+    - state: right
+  - type: Construction
+    graph: N14Seat
+    node: N14ChairDinerCornerRight
