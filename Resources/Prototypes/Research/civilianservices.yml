@@ -81,6 +81,7 @@
     - DawInstrumentMachineCircuitboard
     - MassMediaCircuitboard
     - JukeboxCircuitBoard
+    - BorgModuleDJ # DeltaV
 
 - type: technology
   id: MeatManipulation

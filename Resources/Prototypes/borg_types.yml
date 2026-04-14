@@ -247,11 +247,15 @@
     - BorgModuleService
 
   defaultModules:
-  - BorgModuleMusique
-#  - BorgModuleService # DeltaV - Rework Service Borg
-  - BorgModuleClowning
-  - BorgModuleGardeningDV # DeltaV - Rework Service Borg
-#  - BorgModuleHarvesting # DeltaV - Rework Service Borg
+# Start of DeltaV Additions - Rework Service Borg
+#  - BorgModuleMusique
+#  - BorgModuleService
+#  - BorgModuleClowning
+#  - BorgModuleHarvesting
+  - BorgModuleGardeningDV
+  - BorgModuleChef
+  - BorgModuleBartender
+# End of DeltaV Additions
   radioChannels:
   - Science
   - Service

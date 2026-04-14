@@ -325,3 +325,8 @@
   parent: BaseBorgModuleRecipe
   id: BorgModuleFishing
   result: BorgModuleFishing
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleDJ
+  result: BorgModuleDJ

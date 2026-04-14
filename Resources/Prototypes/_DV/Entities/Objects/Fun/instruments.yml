@@ -75,3 +75,22 @@
     heldPrefix: bloodredsynth
     size: Normal
     sprite: _DV/Objects/Fun/Instruments/redsupersynth.rsi
+
+- type: entity
+  parent: BaseHandheldInstrument
+  id: DJSetInstrument
+  name: portable disc jockey control system
+  description: An all-in-one standalone DJ system. Your neck hurts looking at this.
+  components:
+  - type: Sprite
+    sprite: _DV/Objects/Fun/Instruments/djset.rsi
+    layers:
+    - state: icon
+      shader: unshaded
+  - type: Appearance
+  - type: ActivatableUI
+    inHandsOnly: false
+    singleUser: true
+  - type: Instrument
+    allowPercussion: true
+    allowProgramChange: true

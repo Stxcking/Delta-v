@@ -108,10 +108,13 @@
         },
         {
             "name": "icon-reporter"
+        },
+        {
+            "name": "icon-fish"
         }
 ,
         {
-            "name": "icon-fish"
+            "name": "icon-dj"
         }
     ]
 }
