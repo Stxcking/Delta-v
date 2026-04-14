@@ -9,26 +9,26 @@
     "states": [
         {
             "name": "icon",
-            "directions": 1,
-            "delays":
-            [
+            "delays": [
+                [
                 0.2,
                 0.2,
                 0.2,
                 0.2,
                 0.2
+                ]
             ]
         },
         {
             "name": "unshaded",
-            "directions": 1,
-            "delays":
-            [
+            "delays": [
+                [
                 0.2,
                 0.2,
                 0.2,
                 0.2,
                 0.2
+                ]
             ]
         },
         {

@@ -546,6 +546,7 @@
           - Figurine
           - TabletopBoard
           - Write
+          - Folder
     - item: BoxFolderClipboardThreePapers
       hand:
         emptyLabel: borg-slot-documents-empty
@@ -558,6 +559,7 @@
           - Figurine
           - TabletopBoard
           - Write
+          - Folder
     - hand:
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: d20Dice
@@ -569,6 +571,7 @@
           - Figurine
           - TabletopBoard
           - Write
+          - Folder
     - hand:
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: BookBase
@@ -580,6 +583,7 @@
           - Figurine
           - TabletopBoard
           - Write
+          - Folder
     - item: BooksBag
     - item: HandLabeler
     - item: RubberStampApproved
@@ -734,6 +738,7 @@
         whitelist:
           tags:
           - GlassBeaker
+          - Dropper
     - item: ReagentContainerFlour
       hand:
         emptyLabel: borg-slot-ingredients-empty
@@ -741,10 +746,13 @@
         whitelist:
           components:
           - Produce
+          - SliceableFood
           tags:
           - Ingredients
           - Fruit
           - Vegetable
+          - Slice
+          - DrinkBottle
     - hand:
         emptyLabel: borg-slot-food-empty
         emptyRepresentative: FoodPizzaMargheritaSlice
@@ -760,7 +768,7 @@
     - item: FoodShakerSalt
       hand:
         emptyLabel: borg-slot-condiments-empty
-        emptyRepresentative: FoodShakerSalt
+        emptyRepresentative: Ketchup
         whitelist:
           tags:
           - SaltShaker
@@ -806,6 +814,7 @@
         whitelist:
           tags:
           - GlassBeaker
+          - Dropper
     - item: ReagentContainerFlourBorg
     - hand:
         emptyLabel: borg-slot-ingredients-empty
@@ -813,10 +822,13 @@
         whitelist:
           components:
           - Produce
+          - SliceableFood
           tags:
           - Ingredients
           - Fruit
           - Vegetable
+          - Slice
+          - DrinkBottle
     - hand:
         emptyLabel: borg-slot-food-empty
         emptyRepresentative: FoodPizzaMargheritaSlice
@@ -967,11 +979,12 @@
           - Book
           - Document
           - Write
+          - Folder
     - item: TapeRecorder
     - item: CassetteTape
       hand:
         emptyLabel: borg-slot-documents-empty
-        emptyRepresentative: BoxFolderClipboardEmpty
+        emptyRepresentative: CassetteTape
         whitelist:
           components:
           - FitsInTapeRecorder
@@ -1022,7 +1035,7 @@
 
 - type: entity
   id: BorgModuleDJ
-  parent: [ BaseBorgModuleServicDV, BaseProviderBorgModule ]
+  parent: [ BaseBorgModuleServiceDV, BaseProviderBorgModule ]
   name: DJ cyborg module
   components:
   - type: Sprite
@@ -1074,7 +1087,7 @@
           components:
           - Instrument
   - type: BorgModuleIcon
-    icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-dj-module }
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-dj-module }
 
 - type: entity
   id: BorgModuleClowningDV
@@ -1106,5 +1119,6 @@
         whitelist:
           tags:
           - Pie
+          - Trash
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: clowning-module }

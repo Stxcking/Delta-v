@@ -94,3 +94,7 @@
   - type: Instrument
     allowPercussion: true
     allowProgramChange: true
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - neck

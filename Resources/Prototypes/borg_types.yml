@@ -255,7 +255,7 @@
   - BorgModuleGardeningDV
   - BorgModuleChef
   - BorgModuleBartender
-# End of DeltaV Additions
+# End of DeltaV Additions - Rework Service Borg
   radioChannels:
   - Science
   - Service

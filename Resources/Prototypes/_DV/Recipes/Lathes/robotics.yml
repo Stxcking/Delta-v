@@ -335,3 +335,8 @@
   parent: BaseBorgModuleRecipe
   id: BorgModuleClowningDV
   result: BorgModuleClowningDV
+
+- type: latheRecipe
+  parent: BaseBorgModuleRecipe
+  id: BorgModuleMusique
+  result: BorgModuleMusique

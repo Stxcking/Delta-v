@@ -61,6 +61,7 @@
     storedRotation: -90
   - type: ActivatableUI
     key: enum.PlantAnalyzerUiKey.Key
+    inHandsOnly: false
   - type: UserInterface
     interfaces:
       enum.PlantAnalyzerUiKey.Key:
@@ -110,6 +111,7 @@
     needsPower: false
   - type: ActivatableUI
     key: enum.MicrowaveUiKey.Key
+    inHandsOnly: false
   - type: WirelessNetworkConnection
     range: 200
   - type: UserInterface
@@ -160,7 +162,7 @@
     state: booze
   - type: ActivatableUI
     key: enum.ReagentDispenserUiKey.Key
-    inHandsOnly: true
+    inHandsOnly: false
   - type: UserInterface
     interfaces:
       enum.ReagentDispenserUiKey.Key:
@@ -228,7 +230,7 @@
     state: soda
   - type: ActivatableUI
     key: enum.ReagentDispenserUiKey.Key
-    inHandsOnly: true
+    inHandsOnly: false
   - type: UserInterface
     interfaces:
       enum.ReagentDispenserUiKey.Key:
