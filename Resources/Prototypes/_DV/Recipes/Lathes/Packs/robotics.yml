@@ -48,6 +48,7 @@
   id: BorgDVModulesStatic
   recipes:
   - BorgModuleDecoration
+  - BorgModuleFishing
 
 # Service Modules
 
@@ -57,7 +58,6 @@
   - BorgModuleBureaucracy
   - BorgModuleBoxing
   - BorgModuleReporter
-  - BorgModuleFishing
   - BorgModuleMusique
   - BorgModuleClowning
 

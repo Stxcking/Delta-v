@@ -621,13 +621,13 @@
   - type: ItemBorgModule
     hands:
     - item: ClothingHandsGlovesBoxingRedBorg
-    - item: Gauze
+    - item: Brutepack
       hand:
         emptyLabel: borg-slot-topicals-empty
-        emptyRepresentative: Gauze
+        emptyRepresentative: Brutepack
         whitelist:
           tags:
-          - Gauze
+          - Brutepack
     - hand:
         emptyLabel: borg-slot-medals-empty
         emptyRepresentative: ClothingNeckGoldmedal
@@ -786,7 +786,7 @@
     - item: FoodShakerSalt
       hand:
         emptyLabel: borg-slot-condiments-empty
-        emptyRepresentative: Ketchup
+        emptyRepresentative: FoodCondimentBottleKetchup
         whitelist:
           tags:
           - SaltShaker
@@ -1020,6 +1020,12 @@
     layers:
     - state: service
     - state: icon-fish
+  - type: BorgModule
+    borgFitTypes:
+    - borg-type-all
+  - type: Tag
+    tags:
+    - BorgModuleGeneric
   - type: ItemBorgModule
     hands:
     - item: FishingRod

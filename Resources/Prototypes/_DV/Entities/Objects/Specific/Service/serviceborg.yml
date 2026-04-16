@@ -93,7 +93,7 @@
   name: integrated advanced microwave
   suffix: Borg
   categories: [ DoNotMap ]
-  description: You very own built-in radiation generator.
+  description: Your very own built-in radiation generator.
   components:
   - type: Sprite
     sprite: _DV/Structures/Machines/advanced_microwave.rsi
@@ -106,6 +106,9 @@
     providedRecipes:
     - RecipeBaguetteSword
     - RecipeThrowingCroissant
+  - type: ContainerContainer
+    containers:
+      microwave_entity_container: !type:Container
   - type: ApcPowerReceiver
     powerLoad: 0
     needsPower: false
@@ -152,7 +155,7 @@
 - type: entity
   id: BoozeDispenserBorg
   parent: BaseItem
-  name: integrated soda dispenser
+  name: integrated booze dispenser
   suffix: Borg
   categories: [ DoNotMap ]
   description: An integrated booze dispenser! Make drinks on the go.
@@ -173,7 +176,6 @@
     containers:
       storagebase: !type:Container
       beakerSlot: !type:ContainerSlot
-      outputSlot: !type:ContainerSlot
   - type: SolutionContainerManager
     solutions:
       dispenser:
@@ -192,7 +194,6 @@
       - FitsInDispenser
       tags:
       - DrinkBottle
-      - DrinkCan
     maxItemSize: Normal
     grid:
     - 0,0,19,5
@@ -255,7 +256,6 @@
     whitelist:
       tags:
       - DrinkBottle
-      - DrinkCan
     maxItemSize: Normal
     grid:
     - 0,0,19,5
