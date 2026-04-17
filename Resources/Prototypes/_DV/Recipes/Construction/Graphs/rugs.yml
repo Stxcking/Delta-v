@@ -30,13 +30,13 @@
             - material: FloorCarpetBlue
               amount: 4
               doAfter: 2
-        - to: brownRug
+        - to: purpleRug
           completed:
             - !type:SnapToGrid
           steps:
             - material: FloorCarpetRed
               amount: 2
-            - material: FloorCarpetGreen
+            - material: FloorCarpetBlue
               amount: 2
         - to: redRug
           completed:
@@ -72,8 +72,8 @@
             - tool: Screwing
               doAfter: 1
 
-    - node: brownRug
-      entity: N14RugBrown
+    - node: purpleRug
+      entity: N14RugPurple
       edges:
         - to: start
           completed:

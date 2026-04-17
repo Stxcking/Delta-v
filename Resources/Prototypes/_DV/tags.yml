@@ -301,5 +301,5 @@
   id: RegenerativeMesh
 
 - type: Tag
-  id: MedicalSuture # Storage Sprites State End
+  id: MedicatedSuture # Storage Sprites State End
 

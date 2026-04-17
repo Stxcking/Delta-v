@@ -17,6 +17,7 @@
   parent: StoolBase # so it can swivel
   id: N14ChairBarRetro
   name: retro chair
+  description: You spin me right 'round, baby.
   placement:
     mode: PlaceFree
   components:
@@ -44,6 +45,7 @@
   parent: OfficeChairBase
   id: N14ChairOfficeErgonomic
   name: ergonomic office chair
+  description: A chair that guranteed productivity.
   placement:
     mode: PlaceFree
   components:

@@ -60,6 +60,22 @@
             - material: Steel
               amount: 3
               doAfter: 2
+        - to: N14MetalCounterFrame
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: WoodPlank
+              amount: 2
+              doAfter: 1
+        - to: N14MetalCounterFrame
+          completed:
+            - !type:SnapToGrid
+              southRotation: true
+          steps:
+            - material: Steel
+              amount: 2
+              doAfter: 1
 
 # Wooden Tables with Frame
     - node: N14WoodFrame
@@ -229,14 +245,6 @@
             - material: Steel
               amount: 3
               doAfter: 2
-
-        - to: N14MetalCounterFrame
-          steps:
-            - material: Steel
-              amount: 2
-              doAfter: 1
-            - tool: Screwing
-              doAfter: 1
 
 # Counters
     - node: N14WoodCounterFrame

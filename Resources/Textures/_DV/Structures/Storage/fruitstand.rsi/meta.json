@@ -8,22 +8,28 @@
     },
     "states": [
         {
-            "name": "stand"
+            "name": "stand",
+            "directions": 4
         },
         {
-            "name": "fruit-0"
+            "name": "fruit-0",
+            "directions": 4
         },
         {
-            "name": "fruit-1"
+            "name": "fruit-1",
+            "directions": 4
         },
         {
-            "name": "fruit-2"
+            "name": "fruit-2",
+            "directions": 4
         },
         {
-            "name": "fruit-3"
+            "name": "fruit-3",
+            "directions": 4
         },
         {
-            "name": "fruit-4"
+            "name": "fruit-4",
+            "directions": 4
         }
     ]
 }

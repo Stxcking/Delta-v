@@ -5,10 +5,6 @@
   targetNode: matBlank
   category: construction-category-furniture
   objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
 
 - type: construction
   id: N14RugBlue
@@ -17,22 +13,14 @@
   targetNode: blueRug
   category: construction-category-furniture
   objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
 
 - type: construction
-  id: N14RugBrown
+  id: N14RugPurple
   graph: N14RugRecipes
   startNode: start
-  targetNode: brownRug
+  targetNode: purpleRug
   category: construction-category-furniture
   objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
 
 - type: construction
   id: N14RugRed
@@ -41,10 +29,6 @@
   targetNode: redRug
   category: construction-category-furniture
   objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
 
 - type: construction
   id: N14RugYellow
@@ -53,10 +37,6 @@
   targetNode: orangeRug
   category: construction-category-furniture
   objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked
 
 - type: construction
   id: N14RugMatRubberLarge
@@ -65,7 +45,3 @@
   targetNode: RubberMat
   category: construction-category-furniture
   objectType: Structure
-  placementMode: SnapgridCenter
-  canBuildInImpassable: false
-  conditions:
-  - !type:TileNotBlocked

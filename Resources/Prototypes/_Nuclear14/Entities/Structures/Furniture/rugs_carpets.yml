@@ -68,7 +68,7 @@
             max: 4 # End DeltaV Additions
 
 - type: entity
-  id: N14RugBrown
+  id: N14RugPurple
   parent: N14RugBlue
   name: purple rug
   description: A fancy looking purple rug.
@@ -80,7 +80,7 @@
     state: purple
   - type: Construction # Begin DeltaV Additions
     graph: N14RugRecipes
-    node: brownRug
+    node: purpleRug
   - type: Damageable
     damageContainer: Inorganic
   - type: Destructible
@@ -90,12 +90,9 @@
       behaviors:
       - !type:SpawnEntitiesBehavior
         spawn:
-          Carpet:
-            min: 2
-            max: 2
-          CarpetGreen:
-            min: 2
-            max: 2 # End DeltaV Additions
+          CarpetPurple:
+            min: 4
+            max: 4 # End DeltaV Additions
 
 - type: entity
   id: N14RugRed
