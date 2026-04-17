@@ -12,49 +12,31 @@
               amount: 3
               doAfter: 1
 
-    - node: matBlank
-      entity: N14RugMat
-
 - type: constructionGraph
   id: N14RugRecipes
   start: start
   graph:
     - node: start
       actions:
-        - !type:DestroyEntity {}
+        - !type:DestroyEntity
       edges:
         - to: blueRug
-          completed:
-            - !type:SnapToGrid
           steps:
             - material: FloorCarpetBlue
               amount: 4
               doAfter: 2
         - to: purpleRug
-          completed:
-            - !type:SnapToGrid
           steps:
             - material: FloorCarpetPurple
               amount: 4
         - to: redRug
-          completed:
-            - !type:SnapToGrid
           steps:
             - material: FloorCarpetRed
               amount: 4
               doAfter: 2
         - to: orangeRug
-          completed:
-            - !type:SnapToGrid
           steps:
             - material: FloorCarpetOrange
-              amount: 4
-              doAfter: 2
-        - to: RubberMat
-          completed:
-            - !type:SnapToGrid
-          steps:
-            - material: Plastic
               amount: 4
               doAfter: 2
 
@@ -101,18 +83,6 @@
           completed:
             - !type:SpawnPrototype
               prototype: CarpetOrange
-              amount: 4
-          steps:
-            - tool: Screwing
-              doAfter: 1
-
-    - node: RubberMat
-      entity: N14RugMatRubberLarge
-      edges:
-        - to: start
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetPlastic1
               amount: 4
           steps:
             - tool: Screwing

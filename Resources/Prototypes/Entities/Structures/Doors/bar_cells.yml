@@ -36,7 +36,6 @@
             min: 5
             max: 10
 
-
 - type: entity
   parent: DoorBarCell
   id: DoorBarCellLocked

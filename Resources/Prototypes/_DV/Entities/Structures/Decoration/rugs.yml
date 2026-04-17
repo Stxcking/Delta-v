@@ -25,18 +25,6 @@
                 min: 3
                 max: 3
 
-- type: entity
-  parent: N14CarpetSingleBase
-  id: N14RugMat
-  name: mat
-  components:
-  - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs.rsi
-    state: mat_blank
-  - type: Construction
-    graph: N14RugMatRecipe
-    node: matBlank
-
 # 64x64 rugs
 - type: entity
   id: N14RugBlue
@@ -147,28 +135,3 @@
           CarpetOrange:
             min: 4
             max: 4
-
-- type: entity
-  id: N14RugMatRubberLarge
-  parent: N14RugBlue
-  name: rubber mat
-  description: A large laboratory-grade rubber mat. Feel safe as you spill acid on yourself!
-  placement:
-    mode: PlaceFree
-  components:
-  - type: Sprite
-    sprite: _Nuclear14/Structures/Furniture/rugs64x64.rsi
-    state: rug_rubber
-  - type: Construction
-    graph: N14RugRecipes
-    node: RubberMat
-  - type: Destructible
-    thresholds:
-    - trigger: !type:DamageTrigger
-        damage: 10
-      behaviors:
-        - !type:SpawnEntitiesBehavior
-          spawn:
-            SheetPlastic:
-              min: 4
-              max: 4

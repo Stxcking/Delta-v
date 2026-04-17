@@ -1,6 +1,7 @@
 - type: entity
   id: N14FreeTableBase # Base off this for wood tables
   parent: BaseStructure
+  abstract: true
   name: table
   description: A square piece of wood standing on four wood legs.
   components:
@@ -421,10 +422,6 @@
       map: ["enum.StorageVisualLayers.Base"]
     - state: opened
       map: ["enum.StorageVisualLayers.Door"]
-  - type: Appearance
-  - type: EntityStorageVisuals
-    stateDoorClosed: base
-    stateDoorOpen: opened
   - type: Fixtures
     fixtures:
       fix1:
@@ -438,8 +435,8 @@
         - TableLayer
   - type: Storage
     grid:
-    - 0,0,3,2
-    - 5,0,5,7
+    - 0,0,2,2
+    - 5,0,7,2
     maxItemSize: Normal
   - type: UserInterface
     interfaces:
@@ -640,8 +637,8 @@
         - TableLayer
   - type: Storage
     grid:
-    - 0,0,2,3
-    - 5,0,5,7
+    - 0,0,2,2
+    - 5,0,7,2
     maxItemSize: Normal
   - type: UserInterface
     interfaces:

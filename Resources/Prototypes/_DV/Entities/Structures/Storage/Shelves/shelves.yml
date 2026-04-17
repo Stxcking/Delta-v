@@ -141,7 +141,7 @@
         - MidImpassable
   - type: Storage
     grid:
-    - 0,0,3,6
+    - 0,0,4,5
     maxItemSize: Large
   - type: Construction
     graph: StandingShelves
@@ -169,7 +169,7 @@
         - MidImpassable
   - type: Storage
     grid:
-    - 0,0,3,6
+    - 0,0,4,5
     maxItemSize: Large
   - type: Construction
     graph: StandingShelves
@@ -297,7 +297,6 @@
   - type: Construction
     graph: StandingShelves
     node: MetalStandingShelfMedical
-
 
 - type: entity
   parent: MetalStandingShelfMedical
