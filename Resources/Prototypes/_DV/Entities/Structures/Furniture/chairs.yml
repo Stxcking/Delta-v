@@ -35,7 +35,7 @@
   description: A cozy diner chair.
   components:
   - type: Sprite
-    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair.rsi
+    sprite: _DV/Structures/Furniture/Chairs/Diner/diner_chair.rsi
     state: diner_chair
   - type: Construction
     graph: N14Seat
@@ -78,7 +78,7 @@
   suffix: Left
   components:
   - type: Sprite
-    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair.rsi
+    sprite: _DV/Structures/Furniture/Chairs/Diner/diner_chair.rsi
     state: diner_chair_left
   - type: Construction
     graph: N14Seat
@@ -91,7 +91,7 @@
   suffix: Right
   components:
   - type: Sprite
-    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair.rsi
+    sprite: _DV/Structures/Furniture/Chairs/Diner/diner_chair.rsi
     state: diner_chair_right
   - type: Construction
     graph: N14Seat
@@ -104,7 +104,7 @@
   suffix: Left
   components:
   - type: Sprite
-    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair_corner.rsi
+    sprite: _DV/Structures/Furniture/Chairs/Diner/diner_chair_corner.rsi
     layers:
     - state: left
   - type: Construction
@@ -118,7 +118,7 @@
   suffix: Right
   components:
   - type: Sprite
-    sprite: _DV/Structures/Furniture/Chairs/n14.rsi/Diner/diner_chair_corner.rsi
+    sprite: _DV/Structures/Furniture/Chairs/Diner/diner_chair_corner.rsi
     layers:
     - state: right
   - type: Construction
