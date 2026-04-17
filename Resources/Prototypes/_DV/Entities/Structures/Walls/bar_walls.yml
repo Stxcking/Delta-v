@@ -1,4 +1,3 @@
-# Bar walls and bends for detention/security areas
 - type: entity
   parent: BaseStructureWall
   id: WallBar

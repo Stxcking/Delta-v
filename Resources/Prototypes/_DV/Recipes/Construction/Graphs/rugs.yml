@@ -34,10 +34,8 @@
           completed:
             - !type:SnapToGrid
           steps:
-            - material: FloorCarpetRed
-              amount: 2
-            - material: FloorCarpetBlue
-              amount: 2
+            - material: FloorCarpetPurple
+              amount: 4
         - to: redRug
           completed:
             - !type:SnapToGrid
@@ -78,11 +76,8 @@
         - to: start
           completed:
             - !type:SpawnPrototype
-              prototype: Carpet
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: CarpetGreen
-              amount: 2
+              prototype: CarpetPurple
+              amount: 4
           steps:
             - tool: Screwing
               doAfter: 1
