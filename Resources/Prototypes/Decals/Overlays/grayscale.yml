@@ -451,7 +451,7 @@
   tags: ["station", "overlay"]
   defaultCustomColor: true
   sprite:
-    sprite: Decals/Overlays/greyscale.rsi
+    sprite: _DV/Decals/Overlays/greyscale.rsi # DeltaV
     state: offset
 
 - type: decal

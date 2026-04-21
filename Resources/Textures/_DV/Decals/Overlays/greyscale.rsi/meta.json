@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-NC-SA-3.0",
-    "copyright": "mirrorcult, texturized by aexxie, diagonal / quartertile / halftile / fulltile / checker modified by Adeinitas of Delta-V to go with the paradise artstyle",
+    "copyright": "mirrorcult, texturized by aexxie, diagonal / quartertile / halftile / fulltile / checker modified by Adeinitas of Delta-V to go with the paradise artstyle. Offset modified by @Stxcking (github).",
     "size": {
         "x": 32,
         "y": 32
@@ -60,6 +60,9 @@
         },
         {
             "name": "diagonal_checker_b"
+        },
+        {
+            "name": "offset"
         }
     ]
 }
