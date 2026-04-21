@@ -282,6 +282,7 @@
     requiredMobState:
     - Critical
     - Dead
+  - type: BorgSwitchableSubtype # Afterlight change
 
 - type: entity
   abstract: true

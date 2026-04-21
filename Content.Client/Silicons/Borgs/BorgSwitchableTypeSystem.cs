@@ -1,4 +1,5 @@
-﻿using Content.Shared.Movement.Components;
+﻿using Content.Shared._Afterlight.Silicons.Borgs; // Afterlight
+using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Client.GameObjects;
@@ -43,6 +44,13 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         if (prototype.ClientComponents is {} add)
             EntityManager.AddComponents(entity, add);
         // End DeltaV Additions
+
+        // Begin AL Additions - added checks to stop sprite state errors
+        if (!TryComp<BorgSwitchableSubtypeComponent>(entity, out var subtype) ||
+            subtype.BorgSubtype != null)
+            return;
+        // End AL Additions - added checks to stop sprite state errors
+
         if (TryComp(entity, out SpriteComponent? sprite))
         {
             // Begin DeltaV Additions - work around engine bug with AddComponents
