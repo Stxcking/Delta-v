@@ -67,6 +67,7 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
         {
             ConfirmTypeButton.Disabled = false;
         };
+        ChassisSpriteSelection.SubtypeSelected += () => ConfirmTypeButton.Disabled = false;
         // Afterlight end
     }
 
@@ -95,6 +96,14 @@ public sealed partial class BorgSelectTypeMenu : FancyWindow
             }
         }
         // End DeltaV Changes
+
+        // Begin Afterlight Changes - borg subtype
+        if (_selectedBorgType != null)
+        {
+            ChassisSpriteSelection.Update(_selectedBorgType);
+            ConfirmTypeButton.Disabled = ChassisSpriteSelection.SubtypePrototype == null;
+        }
+        // End Afterlight Changes
 
         NameLabel.Text = PrototypeName(prototype);
         DescriptionLabel.Text = Loc.GetString($"borg-type-{prototype.ID}-desc");
