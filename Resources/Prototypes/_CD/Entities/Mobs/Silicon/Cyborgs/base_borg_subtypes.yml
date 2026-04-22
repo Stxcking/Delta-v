@@ -41,7 +41,6 @@
 
       dummyPrototype: BorgChassisGeneric
 
-
 # mining (salvage)
 - type: entity
   parent: BorgSubtypeBase
@@ -106,6 +105,36 @@
 
       # Description
       dummyPrototype: BorgChassisService
+
+## Begin DeltaV Additions
+
+# security
+- type: entity
+  parent: BorgSubtypeBase
+  abstract: true
+  id: BorgSecuritySubtypeBase
+  name: borg security subtype
+  components:
+    - type: BorgSubtypeDefinition
+      parentType: security
+
+      # Description
+      dummyPrototype: BorgChassisSecurity
+
+# salvage
+- type: entity
+  parent: BorgSubtypeBase
+  abstract: true
+  id: BorgSalvageSubtypeBase
+  name: borg salvage subtype
+  components:
+    - type: BorgSubtypeDefinition
+      parentType: mining
+
+      # Description
+      dummyPrototype: BorgChassisSalvage
+
+## End DeltaV Additions
 
 - type: entityCategory
   id: BorgSubtype
