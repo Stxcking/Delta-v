@@ -1,9 +1,11 @@
-﻿using Content.Shared._CD.Silicons.Borgs;
+using Content.Shared._CD.Silicons.Borgs;
 using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Client.GameObjects;
-using Robust.Shared.Serialization; // DeltaV
+using Robust.Client.ResourceManagement;
+using Robust.Shared.Serialization.TypeSerializers.Implementations; // CosmicDrif
+using Robust.Shared.Timing; // CosmicDrif
 
 namespace Content.Client.Silicons.Borgs;
 
@@ -17,6 +19,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
     [Dependency] private readonly BorgSystem _borgSystem = default!;
     [Dependency] private readonly AppearanceSystem _appearance = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
 
     public override void Initialize()
     {
@@ -40,13 +43,20 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         Entity<BorgSwitchableTypeComponent> entity,
         BorgTypePrototype prototype)
     {
-        // Begin CD Additions- added checks to stop sprite state errors
-        if (!TryComp<BorgSwitchableSubtypeComponent>(entity, out var subtype) ||
-            subtype.BorgSubtype != null)
+        // Begin AL Addition - added checks to stop sprite state errors
+        if (!_timing.IsFirstTimePredicted)
             return;
 
+        if (TryComp<BorgSwitchableSubtypeComponent>(entity, out var subtype) &&
+            subtype.BorgSubtype != null)
+        {
+            var ev = new TypeTryingToUpdateVisualsEvent();
+            RaiseLocalEvent(entity, ref ev);
+            return;
+        }
+
         if (TryComp(entity, out SpriteComponent? sprite))
-        // End CD Additions - added checks to stop sprite state errors
+        // End AL Additions - added checks to stop sprite state errors
         {
             // Begin DeltaV Additions - work around engine bug with AddComponents
             ((ISerializationHooks) sprite).AfterDeserialization();
@@ -67,6 +77,25 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
                 // Queue update so state changes apply.
                 _appearance.QueueUpdate(entity, appearance);
             }
+        }
+
+        if (prototype.SpriteBodyMovementState is { } movementState)
+        {
+            var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
+            spriteMovement.NoMovementLayers.Clear();
+            spriteMovement.NoMovementLayers["movement"] = new PrototypeLayerData
+            {
+                State = prototype.SpriteBodyState,
+            };
+            spriteMovement.MovementLayers.Clear();
+            spriteMovement.MovementLayers["movement"] = new PrototypeLayerData
+            {
+                State = movementState,
+            };
+        }
+        else
+        {
+            RemComp<SpriteMovementComponent>(entity);
         }
 
         base.UpdateEntityAppearance(entity, prototype);
