@@ -58,9 +58,6 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         if (TryComp(entity, out SpriteComponent? sprite))
         // End AL Additions - added checks to stop sprite state errors
         {
-            // Begin DeltaV Additions - work around engine bug with AddComponents
-            ((ISerializationHooks) sprite).AfterDeserialization();
-            // End DeltaV Additions
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Body, prototype.SpriteBodyState);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.LightStatus, prototype.SpriteToggleLightState);
         }
