@@ -16,7 +16,7 @@ namespace Content.Shared._CD.Silicons.Borgs;
 [EntityCategory("BorgSubtype")]
 public sealed partial class BorgSubtypeDefinitionComponent : Component
 {
-    private static ProtoId<SoundCollectionPrototype> DefaultFootsteps = new("FootstepBorg");
+    private static ProtoId<SoundCollectionPrototype> DefaultFootsteps = new("FootstepBorg"); // DeltaV - Removed Readonly
 
     /// <summary>
     /// <inheritdoc cref="BorgTypePrototype.InventoryTemplateId"/>

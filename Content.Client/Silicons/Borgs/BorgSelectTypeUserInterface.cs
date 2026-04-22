@@ -1,5 +1,5 @@
-﻿using Content.Shared._CD.Silicons;
-using Content.Shared._CD.Silicons.Borgs;
+﻿using Content.Shared._CD.Silicons; // CosmicDrift
+using Content.Shared._CD.Silicons.Borgs; // CosmicDrift
 using Content.Shared.Silicons.Borgs.Components;
 using JetBrains.Annotations;
 using Robust.Client.UserInterface;
@@ -28,6 +28,6 @@ public sealed class BorgSelectTypeUserInterface : BoundUserInterface
 
         _menu = this.CreateWindow<BorgSelectTypeMenu>();
         _menu.ConfirmedBorgType += prototype => SendPredictedMessage(new BorgSelectTypeMessage(prototype));
-        _menu.ConfirmedBorgSubtype += subtypePrototype => SendPredictedMessage(new BorgSelectSubtypeMessage(subtypePrototype?.ID)); // CD - borg subtypes
+        _menu.ConfirmedBorgSubtype += subtypePrototype => SendPredictedMessage(new BorgSelectSubtypeMessage(subtypePrototype?.ID)); // CosmicDrift - borg subtypes
     }
 }

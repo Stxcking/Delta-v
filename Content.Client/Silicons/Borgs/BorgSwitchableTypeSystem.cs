@@ -1,11 +1,11 @@
-using Content.Shared._CD.Silicons.Borgs;
+using Content.Shared._CD.Silicons.Borgs; // CosmicDrift
 using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs;
 using Content.Shared.Silicons.Borgs.Components;
 using Robust.Client.GameObjects;
-using Robust.Client.ResourceManagement;
-using Robust.Shared.Serialization.TypeSerializers.Implementations; // CosmicDrif
-using Robust.Shared.Timing; // CosmicDrif
+using Robust.Client.ResourceManagement;  // CosmicDrift
+using Robust.Shared.Serialization.TypeSerializers.Implementations; // CosmicDrift
+using Robust.Shared.Timing; // CosmicDrift
 
 namespace Content.Client.Silicons.Borgs;
 
@@ -43,7 +43,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         Entity<BorgSwitchableTypeComponent> entity,
         BorgTypePrototype prototype)
     {
-        // Begin AL Addition - added checks to stop sprite state errors
+        // Begin Afterlight Addition - added checks to stop sprite state errors
         if (!_timing.IsFirstTimePredicted)
             return;
 
@@ -56,7 +56,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         }
 
         if (TryComp(entity, out SpriteComponent? sprite))
-        // End AL Additions - added checks to stop sprite state errors
+        // End Afterlight Additions - added checks to stop sprite state errors
         {
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Body, prototype.SpriteBodyState);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.LightStatus, prototype.SpriteToggleLightState);
@@ -76,6 +76,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
             }
         }
 
+        // Start CosmicDrift Changes - borg subtypes
         if (prototype.SpriteBodyMovementState is { } movementState)
         {
             var spriteMovement = EnsureComp<SpriteMovementComponent>(entity);
@@ -96,5 +97,6 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         }
 
         base.UpdateEntityAppearance(entity, prototype);
+        // End CosmicDrift Changes - borg subtypes
     }
 }
