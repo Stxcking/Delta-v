@@ -8,10 +8,6 @@
     },
     "states": [
         {
-            "name": "borg",
-            "directions": 4
-        },
-        {
             "name": "borg_e",
             "directions": 4
         },
@@ -21,6 +17,10 @@
         },
         {
             "name": "borg_l",
+            "directions": 4
+        },
+        {
+            "name": "borg",
             "directions": 4
         }
     ]
