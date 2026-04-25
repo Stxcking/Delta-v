@@ -98,7 +98,7 @@
             - !type:EmptyAllContainers
             - !type:GivePrototype
               prototype: MaterialWoodPlank1
-              amount: 6
+              amount: 3
             - !type:DeleteEntity
           steps:
             - tool: Screwing
@@ -127,7 +127,7 @@
             - !type:EmptyAllContainers
             - !type:GivePrototype
               prototype: MaterialWoodPlank1
-              amount: 12
+              amount: 4
             - !type:DeleteEntity
           steps:
             - tool: Prying
@@ -155,7 +155,10 @@
             - !type:EmptyAllContainers
             - !type:GivePrototype
               prototype: MaterialWoodPlank1
-              amount: 5
+              amount: 4
+            - !type:GivePrototype
+              prototype: SheetSteel1
+              amount: 1
             - !type:DeleteEntity
           steps:
             - tool: Prying
@@ -201,7 +204,7 @@
             - !type:EmptyAllContainers
             - !type:GivePrototype
               prototype: MaterialWoodPlank1
-              amount: 5
+              amount: 4
             - !type:GivePrototype
               prototype: SheetSteel1
               amount: 1

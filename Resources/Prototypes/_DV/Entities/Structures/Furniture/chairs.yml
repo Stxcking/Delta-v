@@ -30,7 +30,7 @@
 
 - type: entity
   parent: ChairBase
-  id: N14ChairDiner
+  id: N14ChairDinerBench
   name: diner chair
   description: A cozy diner chair.
   components:
@@ -72,7 +72,7 @@
     node: N14ChairCaptain
 
 - type: entity
-  parent: N14ChairDiner
+  parent: N14ChairDinerBench
   id: N14ChairDinerLeft
   name: diner chair
   suffix: Left
@@ -85,7 +85,7 @@
     node: N14ChairDinerLeft
 
 - type: entity
-  parent: N14ChairDiner
+  parent: N14ChairDinerBench
   id: N14ChairDinerRight
   name: diner chair
   suffix: Right
@@ -98,7 +98,7 @@
     node: N14ChairDinerRight
 
 - type: entity
-  parent: N14ChairDiner
+  parent: N14ChairDinerBench
   id: N14ChairDinerCornerLeft
   name: diner chair
   suffix: Left
@@ -112,7 +112,7 @@
     node: N14ChairDinerCornerLeft
 
 - type: entity
-  parent: N14ChairDiner
+  parent: N14ChairDinerBench
   id: N14ChairDinerCornerRight
   name: diner chair
   suffix: Right

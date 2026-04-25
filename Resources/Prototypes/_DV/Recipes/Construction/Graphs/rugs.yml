@@ -1,18 +1,4 @@
 - type: constructionGraph
-  id: N14RugMatRecipe
-  start: start
-  graph:
-    - node: start
-      edges:
-        - to: matBlank
-          completed:
-            - !type:SnapToGrid
-          steps:
-            - material: Cloth
-              amount: 3
-              doAfter: 1
-
-- type: constructionGraph
   id: N14RugRecipes
   start: start
   graph:

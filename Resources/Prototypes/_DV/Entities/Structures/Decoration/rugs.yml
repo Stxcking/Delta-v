@@ -40,8 +40,6 @@
   - type: Construction
     graph: N14RugRecipes
     node: blueRug
-  - type: Damageable
-    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger: !type:DamageTrigger
@@ -69,8 +67,6 @@
   - type: Construction
     graph: N14RugRecipes
     node: purpleRug
-  - type: Damageable
-    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger: !type:DamageTrigger
@@ -96,8 +92,6 @@
   - type: Construction
     graph: N14RugRecipes
     node: redRug
-  - type: Damageable
-    damageContainer: Inorganic
   - type: Destructible
     thresholds:
     - trigger: !type:DamageTrigger

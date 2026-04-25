@@ -493,6 +493,14 @@
             - material: Cloth
               amount: 1
               doAfter: 1
+        - to: N14ChairCaptain
+          steps:
+            - material: Steel
+              amount: 3
+              doAfter: 2
+            - material: Cloth
+              amount: 1
+              doAfter: 1
         - to: N14ChairDiner
           steps:
             - material: Steel
@@ -596,20 +604,6 @@
             - tool: Screwing
               doAfter: 1
 
-    - node: N14ChairDiner
-      entity: N14ChairDiner
-      edges:
-        - to: start
-          completed:
-            - !type:SpawnPrototype
-              prototype: SheetSteel1
-              amount: 2
-            - !type:SpawnPrototype
-              prototype: MaterialCloth1
-              amount: 3
-          steps:
-            - tool: Screwing
-              doAfter: 2
 
     - node: N14ChairCaptain
       entity: N14ChairCaptain
@@ -625,6 +619,21 @@
           steps:
             - tool: Screwing
               doAfter: 1
+
+    - node: N14ChairDiner
+      entity: N14ChairDinerBench
+      edges:
+        - to: start
+          completed:
+            - !type:SpawnPrototype
+              prototype: SheetSteel1
+              amount: 2
+            - !type:SpawnPrototype
+              prototype: MaterialCloth1
+              amount: 3
+          steps:
+            - tool: Screwing
+              doAfter: 2
 
     - node: N14ChairDinerLeft
       entity: N14ChairDinerLeft
@@ -685,5 +694,3 @@
           steps:
             - tool: Screwing
               doAfter: 2
-
-#endregion

@@ -10,9 +10,6 @@
   - type: Icon
     sprite: _DV/Structures/Walls/Cells/bar.rsi
     state: bar
-  - type: IconSmooth
-    key: walls
-    base: bar
   - type: Destructible
     thresholds:
     - trigger:
@@ -37,9 +34,6 @@
   - type: Icon
     sprite: _DV/Structures/Walls/Cells/bar.rsi
     state: bar_window
-  - type: IconSmooth
-    key: walls
-    base: bar_window
   - type: Destructible
     thresholds:
     - trigger:
@@ -64,9 +58,6 @@
   - type: Icon
     sprite: _DV/Structures/Walls/Cells/bar_bend.rsi
     state: bar_bend
-  - type: IconSmooth
-    key: walls
-    base: bar_bend
   - type: Destructible
     thresholds:
     - trigger:
