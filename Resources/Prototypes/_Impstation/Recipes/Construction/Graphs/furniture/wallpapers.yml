@@ -71,6 +71,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperBeach
     entity: WallpaperBeach
     edges:
@@ -80,6 +88,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperFish
     entity: WallpaperFish
     edges:
@@ -89,6 +105,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperGreen
     entity: WallpaperGreen
     edges:
@@ -98,6 +122,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperPurple
     entity: WallpaperPurple
     edges:
@@ -107,6 +139,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperRainbow
     entity: WallpaperRainbow
     edges:
@@ -116,6 +156,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperRed
     entity: WallpaperRed
     edges:
@@ -125,6 +173,14 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperSka
     entity: WallpaperSka
     edges:
@@ -134,22 +190,86 @@
       steps:
       - tool: Slicing
         doAfter: 3
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPaper1
+          amount: 2
+      steps:
+      - tool: Prying
+        doAfter: 1
   - node: WallpaperFishCorner
     entity: WallpaperFishCorner
+    edges: # DeltaV
+    - to: WallpaperFish
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperBeachCorner
     entity: WallpaperBeachCorner
+    edges: # DeltaV
+    - to: WallpaperBeach
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperBlackCorner
     entity: WallpaperBlackCorner
+    edges: # DeltaV
+    - to: WallpaperBlack
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperGreenCorner
     entity: WallpaperGreenCorner
+    edges: # DeltaV
+    - to: WallpaperGreen
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperPurpleCorner
     entity: WallpaperPurpleCorner
+    edges: # DeltaV
+    - to: WallpaperPurple
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperRainbowCorner
     entity: WallpaperRainbowCorner
+    edges: # DeltaV
+    - to: WallpaperRainbow
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperRedCorner
     entity: WallpaperRedCorner
+    edges: # DeltaV
+    - to: WallpaperRed
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
   - node: WallpaperSkaCorner
     entity: WallpaperSkaCorner
+    edges: # DeltaV
+    - to: WallpaperSka
+      completed:
+      - !type:SnapToGrid { }
+      steps:
+      - tool: Screwing
+        doAfter: 2
 
 - type: constructionGraph
   id: WallDeco
@@ -232,17 +352,89 @@
         name: construction-graph-tag-glowstick
   - node: WallpaperBannerBlackRed
     entity: WallpaperBannerBlackRed
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 3
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperBannerBlueWhite
     entity: WallpaperBannerBlueWhite
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 3
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperBannerColorful
     entity: WallpaperBannerColorful
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 3
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperBannerRainbow
     entity: WallpaperBannerRainbow
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 3
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperBannerSka
     entity: WallpaperBannerSka
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 3
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperStarsBig
     entity: WallpaperStarsBig
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 2
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperStarsSmall
     entity: WallpaperStarsSmall
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 2
+      steps:
+      - tool: Cutting
+        doAfter: 1
   - node: WallpaperStarsMoon
     entity: WallpaperStarsMoon
+    edges:
+    - to: start # DeltaV
+      completed:
+        - !type:SpawnPrototype
+          prototype: SheetPlastic1
+          amount: 2
+      steps:
+      - tool: Cutting
+        doAfter: 1

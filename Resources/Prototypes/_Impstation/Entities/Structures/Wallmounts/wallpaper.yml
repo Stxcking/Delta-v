@@ -29,7 +29,7 @@
         acts: [ "Destruction" ]
       - !type:SpawnEntitiesBehavior
         spawn:
-          SheetPaper1:
+          PaperScrap: # DeltaV
             min: 1
             max: 1
 
@@ -200,7 +200,7 @@
   id: WallpaperSka
   parent: BaseWallpaper
   name: black and white wallpaper
-  description: SKA WORLD LET'S GO BABEY!!
+  description: SKA WORLD LET'S GO BABY!! # DeltaV - BABY!! instead of BABEY!!
   components:
   - type: Sprite
     state: ska
