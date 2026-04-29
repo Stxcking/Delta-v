@@ -256,3 +256,151 @@
     - state: gibtonite_inactive
       visible: false
       map: [ "enum.MiningScannerVisualLayers.Overlay", "gib" ]
+
+# Un-mineable Variants
+
+- type: entity
+  id: WallRockUnmineable
+  parent: BaseAltRock
+  name: durable rock
+  description: It looks too tough to mine.
+  suffix: Un-mineable
+  components:
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_west
+  - type: IconSmooth
+    key: walls
+    mode: NoSprite
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1500
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          path: /Audio/Effects/break_stone.ogg
+          params:
+            volume: -6
+
+- type: entity
+  id: WallRockBasaltUnmineable
+  parent: WallRockUnmineable
+  name: durable basalt
+  suffix: Un-mineable
+  components:
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_wall
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock_wall
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_wall_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_wall_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_wall_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_wall_west
+
+- type: entity
+  id: WallRockSandUnmineable
+  parent: WallRockUnmineable
+  name: durable sandstone
+  suffix: Un-mineable
+  components:
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_sand
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock_sand
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_sand_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_sand_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_sand_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_sand_west
+
+- type: entity
+  id: WallRockChromiteUnmineable
+  parent: WallRockUnmineable
+  name: durable chromite
+  suffix: Un-mineable
+  components:
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_chromite
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock_chromite
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_chromite_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_chromite_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_chromite_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_chromite_west
+
+- type: entity
+  id: WallRockAndesiteUnmineable
+  parent: WallRockUnmineable
+  name: durable andesite
+  suffix: Un-mineable
+  components:
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_andesite
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock_andesite
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_andesite_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_andesite_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_andesite_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_andesite_west
+
+- type: entity
+  id: WallRockSnowUnmineable
+  parent: WallRockUnmineable
+  name: durable snowdrift
+  suffix: Un-mineable
+  components:
+  - type: Icon
+    sprite: Structures/Walls/rock.rsi
+    state: rock_snow
+  - type: Sprite
+    sprite: Structures/Walls/rock.rsi
+    layers:
+    - state: rock_snow
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_snow_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_snow_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_snow_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_snow_west
