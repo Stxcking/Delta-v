@@ -378,3 +378,22 @@
       state: rock_snow_north
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_snow_west
+
+- type: entity
+  id: WallRockAsteroidUnmineable
+  parent: WallRockUnmineable
+  name: compacted asteroid
+  components:
+  - type: Icon
+    state: rock_asteroid
+  - type: Sprite
+    layers:
+    - state: rock_asteroid
+    - map: [ "enum.EdgeLayer.South" ]
+      state: rock_asteroid_south
+    - map: [ "enum.EdgeLayer.East" ]
+      state: rock_asteroid_east
+    - map: [ "enum.EdgeLayer.North" ]
+      state: rock_asteroid_north
+    - map: [ "enum.EdgeLayer.West" ]
+      state: rock_asteroid_west
