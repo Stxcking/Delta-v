@@ -261,15 +261,17 @@
 
 - type: entity
   id: WallRockUnmineable
-  parent: BaseAltRock
-  name: durable rock
+  parent: MountainRock
+  name: compacted rock
   description: It looks too tough to mine.
-  suffix: Un-mineable
   components:
+  - type: Icon
+    sprite: _DV/Structures/Walls/compacted_rocks.rsi
+    state: rock_wall
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
+    sprite: _DV/Structures/Walls/compacted_rocks.rsi
     layers:
-    - state: rock
+    - state: rock_base
     - map: [ "enum.EdgeLayer.South" ]
       state: rock_south
     - map: [ "enum.EdgeLayer.East" ]
@@ -279,33 +281,17 @@
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_west
   - type: IconSmooth
-    key: walls
     mode: NoSprite
-  - type: Destructible
-    thresholds:
-    - trigger:
-        !type:DamageTrigger
-        damage: 1500
-      behaviors:
-      - !type:DoActsBehavior
-        acts: ["Destruction"]
-      - !type:PlaySoundBehavior
-        sound:
-          path: /Audio/Effects/break_stone.ogg
-          params:
-            volume: -6
+  - type: SmoothEdge
 
 - type: entity
   id: WallRockBasaltUnmineable
   parent: WallRockUnmineable
-  name: durable basalt
-  suffix: Un-mineable
+  name: compacted basalt
   components:
   - type: Icon
-    sprite: Structures/Walls/rock.rsi
     state: rock_wall
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
     layers:
     - state: rock_wall
     - map: [ "enum.EdgeLayer.South" ]
@@ -320,14 +306,11 @@
 - type: entity
   id: WallRockSandUnmineable
   parent: WallRockUnmineable
-  name: durable sandstone
-  suffix: Un-mineable
+  name: compacted sandstone
   components:
   - type: Icon
-    sprite: Structures/Walls/rock.rsi
     state: rock_sand
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
     layers:
     - state: rock_sand
     - map: [ "enum.EdgeLayer.South" ]
@@ -342,14 +325,11 @@
 - type: entity
   id: WallRockChromiteUnmineable
   parent: WallRockUnmineable
-  name: durable chromite
-  suffix: Un-mineable
+  name: compacted chromite
   components:
   - type: Icon
-    sprite: Structures/Walls/rock.rsi
     state: rock_chromite
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
     layers:
     - state: rock_chromite
     - map: [ "enum.EdgeLayer.South" ]
@@ -364,14 +344,11 @@
 - type: entity
   id: WallRockAndesiteUnmineable
   parent: WallRockUnmineable
-  name: durable andesite
-  suffix: Un-mineable
+  name: compacted andesite
   components:
   - type: Icon
-    sprite: Structures/Walls/rock.rsi
     state: rock_andesite
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
     layers:
     - state: rock_andesite
     - map: [ "enum.EdgeLayer.South" ]
@@ -386,14 +363,11 @@
 - type: entity
   id: WallRockSnowUnmineable
   parent: WallRockUnmineable
-  name: durable snowdrift
-  suffix: Un-mineable
+  name: compacted snowdrift
   components:
   - type: Icon
-    sprite: Structures/Walls/rock.rsi
     state: rock_snow
   - type: Sprite
-    sprite: Structures/Walls/rock.rsi
     layers:
     - state: rock_snow
     - map: [ "enum.EdgeLayer.South" ]
