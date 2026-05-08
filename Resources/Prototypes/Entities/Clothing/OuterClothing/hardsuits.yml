@@ -1072,6 +1072,8 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitLing
+  - type: Tag # DeltaV - Removed from Chameleon Whitelist
+    tags: []
   - type: MappingCategories # DeltaV
     categories:
     - Changeling
