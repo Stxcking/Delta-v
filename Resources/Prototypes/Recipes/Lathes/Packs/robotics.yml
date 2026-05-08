@@ -41,7 +41,7 @@
   - BorgModuleAdvancedTool
   - BorgModuleAdvancedClowning
   - BorgModuleAdvancedTopical
-  - BorgModuleAdvancedChemicalDV
+  - BorgModuleAdvancedChemicalDV # DeltaV
   - BorgModuleAdvancedMining
 
 - type: latheRecipePack
