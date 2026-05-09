@@ -535,7 +535,7 @@
     hands:
     - item: LuxuryPen
     - item: Paper
-      hand:
+      hand: &paper-hand
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: Paper
         whitelist:
@@ -549,45 +549,18 @@
           - Folder
     - item: BoxFolderClipboardThreePapers
       hand:
-        emptyLabel: borg-slot-documents-empty
+        <<: *paper-hand
         emptyRepresentative: BoxFolderClipboardEmpty
-        whitelist:
-          tags:
-          - Book
-          - Dice
-          - Document
-          - Figurine
-          - TabletopBoard
-          - Write
-          - Folder
     - hand:
-        emptyLabel: borg-slot-documents-empty
+        <<: *paper-hand
         emptyRepresentative: d20Dice
-        whitelist:
-          tags:
-          - Book
-          - Dice
-          - Document
-          - Figurine
-          - TabletopBoard
-          - Write
-          - Folder
     - hand:
-        emptyLabel: borg-slot-documents-empty
+        <<: *paper-hand
         emptyRepresentative: BookBase
-        whitelist:
-          tags:
-          - Book
-          - Dice
-          - Document
-          - Figurine
-          - TabletopBoard
-          - Write
-          - Folder
     - item: BooksBag
     - item: HandLabeler
     - item: RubberStampApproved
-      hand:
+      hand: &stamp-hand
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: RubberStampApproved
         whitelist:
@@ -598,14 +571,8 @@
           - Folder
     - item: RubberStampDenied
       hand:
-        emptyLabel: borg-slot-documents-empty
+        <<: *stamp-hand
         emptyRepresentative: RubberStampDenied
-        whitelist:
-          tags:
-          - Stamp
-          - Document
-          - Write
-          - Folder
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-bureaucracy-module }
 
@@ -657,7 +624,7 @@
     - item: HydroponicsToolHatchet
     - item: Bucket
     - item: PlantBag
-    - hand:
+    - hand: &produce-hand
         emptyLabel: borg-slot-produce-empty
         emptyRepresentative: WheatSeeds
         whitelist:
@@ -665,12 +632,8 @@
           - Seed
           - Produce
     - hand:
-        emptyLabel: borg-slot-produce-empty
+        <<: *produce-hand
         emptyRepresentative: WheatBushel
-        whitelist:
-          components:
-          - Seed
-          - Produce
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: gardening-module }
 
@@ -703,36 +666,21 @@
           - Dropper
           - Syringe
     - item: ChemistryBottleRobustHarvest
-      hand:
+      hand: &small-container-hand
         emptyLabel: borg-slot-small-containers-empty
         emptyRepresentative: Beaker
         whitelist:
           tags:
           - Bottle
           - GlassBeaker
+          - Dropper
     - item: ChemistryBottleUnstableMutagen
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: Beaker
-        whitelist:
-          tags:
-          - Bottle
-          - GlassBeaker
+      hand: *small-container-hand
     - item: PlantBagOfHolding
+    - hand: *produce-hand
     - hand:
-        emptyLabel: borg-slot-produce-empty
-        emptyRepresentative: WheatSeeds
-        whitelist:
-          components:
-          - Seed
-          - Produce
-    - hand:
-        emptyLabel: borg-slot-produce-empty
+        <<: *produce-hand
         emptyRepresentative: WheatBushel
-        whitelist:
-          components:
-          - Seed
-          - Produce
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: harvesting-module }
 
@@ -750,15 +698,9 @@
     - item: KitchenKnife
     - item: RollingPin
     - item: Beaker
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: Beaker
-        whitelist:
-          tags:
-          - GlassBeaker
-          - Dropper
+      hand: *small-container-hand
     - item: ReagentContainerFlour
-      hand:
+      hand: &ingredients-hand
         emptyLabel: borg-slot-ingredients-empty
         emptyRepresentative: ReagentContainerFlour
         whitelist:
@@ -771,18 +713,13 @@
           - Vegetable
           - Slice
           - DrinkBottle
-    - hand:
+    - hand: &edible-hand
         emptyLabel: borg-slot-food-empty
         emptyRepresentative: FoodPizzaMargheritaSlice
         whitelist:
           components:
           - Edible
-    - hand:
-        emptyLabel: borg-slot-food-empty
-        emptyRepresentative: FoodPizzaMargheritaSlice
-        whitelist:
-          components:
-          - Edible
+    - hand: *edible-hand
     - item: FoodShakerSalt
       hand:
         emptyLabel: borg-slot-condiments-empty
@@ -797,13 +734,13 @@
           - Coldsauce
           - Enzyme
     - item: FoodPlate
-      hand:
+      hand: &dinnerware-hand
         emptyLabel: borg-slot-dinnerware-empty
         emptyRepresentative: FoodPlateSmall
         whitelist:
           tags:
           - Dinnerware
-    - hand:
+    - hand: &kitchenware-hand
         emptyLabel: borg-slot-kitchenware-empty
         emptyRepresentative: FoodPlateTin
         whitelist:
@@ -826,53 +763,14 @@
     hands:
     - item: AdvancedMicrowaveBorg
     - item: Beaker
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: Beaker
-        whitelist:
-          tags:
-          - GlassBeaker
-          - Dropper
+      hand: *small-container-hand
     - item: ReagentContainerFlourBorg
-    - hand:
-        emptyLabel: borg-slot-ingredients-empty
-        emptyRepresentative: ReagentContainerFlour
-        whitelist:
-          components:
-          - Produce
-          - SliceableFood
-          tags:
-          - Ingredients
-          - Fruit
-          - Vegetable
-          - Slice
-          - DrinkBottle
-    - hand:
-        emptyLabel: borg-slot-food-empty
-        emptyRepresentative: FoodPizzaMargheritaSlice
-        whitelist:
-          components:
-          - Edible
-    - hand:
-        emptyLabel: borg-slot-food-empty
-        emptyRepresentative: FoodPizzaMargheritaSlice
-        whitelist:
-          components:
-          - Edible
+    - hand: *ingredients-hand
+    - hand: *edible-hand
+    - hand: *edible-hand
     - item: FoodPlate
-      hand:
-        emptyLabel: borg-slot-dinnerware-empty
-        emptyRepresentative: FoodPlateSmall
-        whitelist:
-          tags:
-          - Dinnerware
-    - hand:
-        emptyLabel: borg-slot-kitchenware-empty
-        emptyRepresentative: FoodPlateTin
-        whitelist:
-          tags:
-          - Kitchenware
-          - Skewer
+      hand: *dinnerware-hand
+    - hand: *kitchenware-hand
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-adv-chef-module }
 
@@ -888,46 +786,41 @@
   - type: ItemBorgModule
     hands:
     - item: DrinkShaker
-      hand:
+      hand: &shaker-hand
         emptyLabel: borg-slot-small-containers-empty
         emptyRepresentative: DrinkShaker
         whitelist:
           components:
           - Shakeable
     - item: BarSpoon
-      hand:
+      hand: &spoon-hand
         emptyLabel: borg-slot-injector-dropper-empty
         emptyRepresentative: BarSpoon
         whitelist:
           components:
           - ReactionMixer
     - item: Skimmer
-      hand:
+      hand: &skimmer-hand
         emptyLabel: borg-slot-injector-dropper-empty
         emptyRepresentative: Skimmer
         whitelist:
           tags:
           - Dropper
-    - hand:
+    - hand: &bottle-hand
         emptyLabel: borg-slot-drinkbottle-empty
         emptyRepresentative: DrinkVodkaBottleFull
         whitelist:
           tags:
           - DrinkBottle
     - item: DrinkGlass
-      hand:
+      hand: &glass-hand
         emptyLabel: borg-slot-small-containers-empty
         emptyRepresentative: DrinkGlass
         whitelist:
           components:
           - FitsInDispenser
     - item: DrinkGlass
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: DrinkGlass
-        whitelist:
-          components:
-          - FitsInDispenser
+      hand: *glass-hand
     - item: RagItem
     - item: HandLabeler
   - type: BorgModuleIcon
@@ -945,34 +838,14 @@
   - type: ItemBorgModule
     hands:
     - item: DrinkShaker
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: DrinkGlass
-        whitelist:
-          components:
-          - FitsInDispenser
+      hand: *shaker-hand
     - item: BoozeDispenserBorg
     - item: SodaDispenserBorg
-    - hand:
-        emptyLabel: borg-slot-drinkbottle-empty
-        emptyRepresentative: DrinkVodkaBottleFull
-        whitelist:
-          tags:
-          - DrinkBottle
+    - hand: *bottle-hand
     - item: DrinkGlass
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: DrinkGlass
-        whitelist:
-          components:
-          - FitsInDispenser
+      hand: *glass-hand
     - item: DrinkGlass
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: DrinkGlass
-        whitelist:
-          components:
-          - FitsInDispenser
+      hand: *glass-hand
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-adv-bar-module }
 
@@ -990,14 +863,8 @@
     - item: LuxuryPen
     - item: BoxFolderClipboardThreePapers
       hand:
-        emptyLabel: borg-slot-documents-empty
+        <<: *paper-hand
         emptyRepresentative: BoxFolderClipboardEmpty
-        whitelist:
-          tags:
-          - Book
-          - Document
-          - Write
-          - Folder
     - item: TapeRecorder
     - item: CassetteTape
       hand:
@@ -1036,24 +903,16 @@
           components:
           - FishingRod
     - item: FishBasket
-    - hand:
+    - hand: &fish-hand
         emptyLabel: borg-slot-fish-empty
         emptyRepresentative: FishBass
         whitelist:
           components:
           - Fish
+    - hand: *fish-hand
     - hand:
-        emptyLabel: borg-slot-fish-empty
-        emptyRepresentative: FishCat
-        whitelist:
-          components:
-          - Fish
-    - hand:
-        emptyLabel: borg-slot-drinkbottle-empty
+        <<: *bottle-hand
         emptyRepresentative: DrinkBeerBottleFull
-        whitelist:
-          tags:
-          - DrinkBottle
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-fish-module }
 
@@ -1069,7 +928,7 @@
   - type: ItemBorgModule
     hands:
     - item: MicrophoneInstrument
-      hand:
+      hand: &instrument-hand
         emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: MicrophoneInstrument
         whitelist:
@@ -1077,38 +936,23 @@
           - Instrument
     - item: DJSetInstrument
       hand:
-        emptyLabel: borg-slot-instruments-empty
+        <<: *instrument-hand
         emptyRepresentative: DJSetInstrument
-        whitelist:
-          components:
-          - Instrument
     - item: SuperSynthesizerInstrument
       hand:
-        emptyLabel: borg-slot-instruments-empty
+        <<: *instrument-hand
         emptyRepresentative: SuperSynthesizerInstrument
-        whitelist:
-          components:
-          - Instrument
     - item: SynthesizerInstrument
       hand:
-        emptyLabel: borg-slot-instruments-empty
+        <<: *instrument-hand
         emptyRepresentative: SynthesizerInstrument
-        whitelist:
-          components:
-          - Instrument
     - item: ElectricGuitarInstrument
       hand:
-        emptyLabel: borg-slot-instruments-empty
+        <<: *instrument-hand
         emptyRepresentative: ElectricGuitarInstrument
-        whitelist:
-          components:
-          - Instrument
     - item: SaxophoneInstrument
       hand:
-        emptyLabel: borg-slot-instruments-empty
+        <<: *instrument-hand
         emptyRepresentative: SaxophoneInstrument
-        whitelist:
-          components:
-          - Instrument
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-dj-module }
