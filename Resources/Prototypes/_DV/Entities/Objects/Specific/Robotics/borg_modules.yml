@@ -535,10 +535,10 @@
     hands:
     - item: LuxuryPen
     - item: Paper
-      hand: &paper-hand
+      hand:
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: Paper
-        whitelist:
+        whitelist: &paper-hand-whitelist
           tags:
           - Book
           - Dice
@@ -549,21 +549,24 @@
           - Folder
     - item: BoxFolderClipboardThreePapers
       hand:
-        <<: *paper-hand
+        emptyLabel: borg-slot-documents-empty
         emptyRepresentative: BoxFolderClipboardEmpty
+        whitelist: *paper-hand-whitelist
     - hand:
-        <<: *paper-hand
+        emptyLabel: borg-slot-documents-empty
         emptyRepresentative: d20Dice
+        whitelist: *paper-hand-whitelist
     - hand:
-        <<: *paper-hand
+        emptyLabel: borg-slot-documents-empty
         emptyRepresentative: BookBase
+        whitelist: *paper-hand-whitelist
     - item: BooksBag
     - item: HandLabeler
     - item: RubberStampApproved
-      hand: &stamp-hand
+      hand:
         emptyLabel: borg-slot-documents-empty
         emptyRepresentative: RubberStampApproved
-        whitelist:
+        whitelist: &stamp-hand-whitelist
           tags:
           - Stamp
           - Document
@@ -571,8 +574,9 @@
           - Folder
     - item: RubberStampDenied
       hand:
-        <<: *stamp-hand
+        emptyLabel: borg-slot-documents-empty
         emptyRepresentative: RubberStampDenied
+        whitelist: *stamp-hand-whitelist
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-bureaucracy-module }
 
@@ -624,16 +628,17 @@
     - item: HydroponicsToolHatchet
     - item: Bucket
     - item: PlantBag
-    - hand: &produce-hand
+    - hand:
         emptyLabel: borg-slot-produce-empty
         emptyRepresentative: WheatSeeds
-        whitelist:
+        whitelist: &produce-hand-whitelist
           components:
           - Seed
           - Produce
     - hand:
-        <<: *produce-hand
+        emptyLabel: borg-slot-produce-empty
         emptyRepresentative: WheatBushel
+        whitelist: *produce-hand-whitelist
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: gardening-module }
 
@@ -677,10 +682,14 @@
     - item: ChemistryBottleUnstableMutagen
       hand: *small-container-hand
     - item: PlantBagOfHolding
-    - hand: *produce-hand
     - hand:
-        <<: *produce-hand
+        emptyLabel: borg-slot-produce-empty
+        emptyRepresentative: WheatSeeds
+        whitelist: *produce-hand-whitelist
+    - hand:
+        emptyLabel: borg-slot-produce-empty
         emptyRepresentative: WheatBushel
+        whitelist: *produce-hand-whitelist
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: harvesting-module }
 
@@ -809,7 +818,7 @@
     - hand: &bottle-hand
         emptyLabel: borg-slot-drinkbottle-empty
         emptyRepresentative: DrinkVodkaBottleFull
-        whitelist:
+        whitelist: &bottle-hand-whitelist
           tags:
           - DrinkBottle
     - item: DrinkGlass
@@ -863,8 +872,9 @@
     - item: LuxuryPen
     - item: BoxFolderClipboardThreePapers
       hand:
-        <<: *paper-hand
+        emptyLabel: borg-slot-documents-empty
         emptyRepresentative: BoxFolderClipboardEmpty
+        whitelist: *paper-hand-whitelist
     - item: TapeRecorder
     - item: CassetteTape
       hand:
@@ -911,8 +921,9 @@
           - Fish
     - hand: *fish-hand
     - hand:
-        <<: *bottle-hand
+        emptyLabel: borg-slot-drinkbottle-empty
         emptyRepresentative: DrinkBeerBottleFull
+        whitelist: *bottle-hand-whitelist
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-fish-module }
 
@@ -928,31 +939,36 @@
   - type: ItemBorgModule
     hands:
     - item: MicrophoneInstrument
-      hand: &instrument-hand
+      hand:
         emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: MicrophoneInstrument
-        whitelist:
+        whitelist: &instrument-hand-whitelist
           components:
           - Instrument
     - item: DJSetInstrument
       hand:
-        <<: *instrument-hand
+        emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: DJSetInstrument
+        whitelist: *instrument-hand-whitelist
     - item: SuperSynthesizerInstrument
       hand:
-        <<: *instrument-hand
+        emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: SuperSynthesizerInstrument
+        whitelist: *instrument-hand-whitelist
     - item: SynthesizerInstrument
       hand:
-        <<: *instrument-hand
+        emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: SynthesizerInstrument
+        whitelist: *instrument-hand-whitelist
     - item: ElectricGuitarInstrument
       hand:
-        <<: *instrument-hand
+        emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: ElectricGuitarInstrument
+        whitelist: *instrument-hand-whitelist
     - item: SaxophoneInstrument
       hand:
-        <<: *instrument-hand
+        emptyLabel: borg-slot-instruments-empty
         emptyRepresentative: SaxophoneInstrument
+        whitelist: *instrument-hand-whitelist
   - type: BorgModuleIcon
     icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: service-dj-module }
