@@ -133,7 +133,7 @@
   name: ambrosia nobilis
   parent: FoodProduceBase
   id: FoodAmbrosiaNobilis
-  description: An blue medicinal plant for those who need to be top off. May have some funky side effects.
+  description: An blue medicinal plant for those who need to be toped off. May have some funky side effects.
   components:
   - type: FlavorProfile
     flavors:
