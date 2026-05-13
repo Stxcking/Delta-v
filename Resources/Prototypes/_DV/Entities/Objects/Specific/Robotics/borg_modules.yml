@@ -568,10 +568,11 @@
         emptyRepresentative: RubberStampApproved
         whitelist: &stamp-hand-whitelist
           tags:
-          - Stamp
           - Document
           - Write
           - Folder
+          components:
+          - Stamp
     - item: RubberStampDenied
       hand:
         emptyLabel: borg-slot-documents-empty

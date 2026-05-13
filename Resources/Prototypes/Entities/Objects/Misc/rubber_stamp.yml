@@ -24,9 +24,6 @@
   - type: MappingCategories # DeltaV
     categories:
     - Stamps
-  - type: Tag # DeltaV - Service Borg Module
-    tags:
-      - Stamp
 
 - type: entity
   name: alternate rubber stamp
@@ -44,9 +41,6 @@
         maxDistance: 5
   - type: MappingCategories # DeltaV - approved/denied are fine
     categories: []
-  - type: Tag # DeltaV - Service Borg Module
-    tags:
-      - Stamp
 
 - type: entity
   name: captain's rubber stamp

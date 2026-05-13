@@ -86,6 +86,7 @@
     sprite: _DV/Objects/Fun/Instruments/djset.rsi
     layers:
     - state: icon
+    - state: display
       shader: unshaded
   - type: Appearance
   - type: ActivatableUI
