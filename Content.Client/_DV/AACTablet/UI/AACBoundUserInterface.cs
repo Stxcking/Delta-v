@@ -7,7 +7,7 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Client._DV.AACTablet.UI;
 
-public sealed partial class AACBoundUserInterface : BoundUserInterface // starcup: made partial
+public sealed class AACBoundUserInterface : BoundUserInterface
 {
     [ViewVariables]
     private AACWindow? _window;
@@ -36,7 +36,7 @@ public sealed partial class AACBoundUserInterface : BoundUserInterface // starcu
 
     private void OnPhraseButtonPressed(List<ProtoId<QuickPhrasePrototype>> phraseId, string prefix)
     {
-        SendMessage(new AACTabletSendPhraseMessage(phraseId, prefix)); // starcup: prefix parameter
+        SendMessage(new AACTabletSendPhraseMessage(phraseId, prefix));
     }
 
     private void OnTyping()
@@ -49,5 +49,15 @@ public sealed partial class AACBoundUserInterface : BoundUserInterface // starcu
     {
         _typing ??= EntMan.System<TypingIndicatorSystem>();
         _typing?.ClientSubmittedChatText();
+    }
+
+    protected override void UpdateState(BoundUserInterfaceState state)
+    {
+        base.UpdateState(state);
+
+        if (state is not AACTabletBuiState msg)
+            return;
+
+        _window?.Update(msg);
     }
 }

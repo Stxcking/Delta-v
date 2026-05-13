@@ -42,7 +42,7 @@
     speechSounds: Alto
   - type: VoiceMask
   - type: AACTablet
-  - type: IntrinsicRadioTransmitter # starcup
-  - type: Grammar # starcup
+  - type: IntrinsicRadioTransmitter
+  - type: Grammar
     attributes:
       proper: True
