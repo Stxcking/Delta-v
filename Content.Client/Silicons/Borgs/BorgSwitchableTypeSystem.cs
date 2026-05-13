@@ -1,3 +1,4 @@
+using Content.Client.PDA; // DeltaV
 using Content.Shared._CD.Silicons.Borgs; // CosmicDrift
 using Content.Shared.Movement.Components;
 using Content.Shared.Silicons.Borgs;
@@ -75,6 +76,15 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
                 _appearance.QueueUpdate(entity, appearance);
             }
         }
+
+        // DeltaV - borg pdas
+        if (TryComp<PdaBorderColorComponent>(entity, out var pdaBorders))
+        {
+            pdaBorders.BorderColor = prototype.PdaBorderColor ?? pdaBorders.BorderColor;
+            pdaBorders.AccentHColor = prototype.PdaAccentHorizontalColor ?? pdaBorders.AccentHColor;
+            pdaBorders.AccentVColor = prototype.PdaAccentVerticalColor ?? pdaBorders.AccentVColor;
+        }
+        // DeltaV - borg pdas
 
         // Start CosmicDrift Changes - borg subtypes
         if (prototype.SpriteBodyMovementState is { } movementState)
