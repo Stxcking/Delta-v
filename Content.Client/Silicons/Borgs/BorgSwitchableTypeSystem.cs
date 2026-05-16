@@ -20,7 +20,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
     [Dependency] private readonly BorgSystem _borgSystem = default!;
     [Dependency] private readonly AppearanceSystem _appearance = default!;
     [Dependency] private readonly SpriteSystem _sprite = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
+    [Dependency] private readonly IGameTiming _timing = default!; // CosmicDrift - borg subtypes
 
     public override void Initialize()
     {
@@ -55,9 +55,8 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
             RaiseLocalEvent(entity, ref ev);
             return;
         }
-
-        if (TryComp(entity, out SpriteComponent? sprite))
         // End Afterlight Additions - added checks to stop sprite state errors
+        if (TryComp(entity, out SpriteComponent? sprite))
         {
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.Body, prototype.SpriteBodyState);
             _sprite.LayerSetRsiState((entity, sprite), BorgVisualLayers.LightStatus, prototype.SpriteToggleLightState);
@@ -105,8 +104,7 @@ public sealed partial class BorgSwitchableTypeSystem : SharedBorgSwitchableTypeS
         {
             RemComp<SpriteMovementComponent>(entity);
         }
-
-        base.UpdateEntityAppearance(entity, prototype);
         // End CosmicDrift Changes - borg subtypes
+        base.UpdateEntityAppearance(entity, prototype);
     }
 }

@@ -1,4 +1,4 @@
-using Content.Shared._CD.Silicons.Borgs;
+using Content.Shared._CD.Silicons.Borgs; // CosmicDrift - borg subtypes
 using Content.Shared.Actions;
 using Content.Shared.Interaction;
 using Content.Shared.Interaction.Components;

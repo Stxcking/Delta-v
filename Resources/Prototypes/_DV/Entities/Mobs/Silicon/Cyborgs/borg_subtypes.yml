@@ -8,7 +8,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisEngineeringStandard
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Engineering/standard.rsi
 
 - type: entity
@@ -19,7 +18,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisEngineeringGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Engineering/generic.rsi
 
 - type: entity
@@ -30,7 +28,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisEngineeringAntique
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Engineering/antique.rsi
 
 # region Generic
@@ -43,7 +40,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisGenericGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Generic/generic.rsi
 
 # region Janitor
@@ -56,7 +52,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisJanitorStandard
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Janitor/standard.rsi
 
 - type: entity
@@ -67,7 +62,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisJanitorGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Janitor/generic.rsi
 
 - type: entity
@@ -78,7 +72,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisJanitorMopbot
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Janitor/mopbot.rsi
 
 - type: entity
@@ -89,7 +82,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisJanitorVest
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Janitor/vest.rsi
 
 # region Medical
@@ -102,7 +94,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisMedicalStandard
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Medical/standard.rsi
 
 - type: entity
@@ -113,7 +104,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisMedicalGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Medical/generic.rsi
 
 - type: entity
@@ -124,7 +114,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisMedicalDoctor
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Medical/doctor.rsi
 
 # region Salvage
@@ -137,7 +126,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisSalvageStandard
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Salvage/standard.rsi
 
 - type: entity
@@ -148,7 +136,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisSalvageGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Salvage/generic.rsi
 
 # region Security
@@ -161,7 +148,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisSecurityStandard
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Security/standard.rsi
 
 - type: entity
@@ -172,7 +158,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisSecurityGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Security/generic.rsi
 
 # region Service
@@ -185,7 +170,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisServiceStandard
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Service/standard.rsi
 
 - type: entity
@@ -196,7 +180,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisServiceGeneric
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Service/generic.rsi
 
 - type: entity
@@ -207,7 +190,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisServiceWaitress
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Service/waitress.rsi
 
 - type: entity
@@ -218,7 +200,6 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisServiceBrobot
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Service/brobot.rsi
 
 - type: entity
@@ -229,5 +210,4 @@
   components:
   - type: BorgSubtypeDefinition
     dummyPrototype: BorgChassisServiceMaximilium
-
     spritePath: _DV/Mobs/Silicon/Cyborgs/Service/maximilium.rsi
