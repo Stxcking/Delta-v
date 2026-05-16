@@ -196,8 +196,9 @@
     - BorgModuleMedical
 
   defaultModules:
-  - BorgModuleTool # DeltaV
+  - BorgModuleTool # DeltaV - Readd Tool Module
   - BorgModuleChemicalDV # DeltaV
+#  - BorgModuleChemical # DeltaV - Added our own.
   - BorgModuleTopicals
   - BorgModuleRescue
 

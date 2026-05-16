@@ -664,7 +664,7 @@
           components:
           - BotanySwab
     - item: BorgDropper
-      hand:
+      hand: &dropper-hand
         emptyLabel: borg-slot-injector-dropper-empty
         emptyRepresentative: Dropper
         whitelist:
@@ -990,7 +990,7 @@
     - item: HandheldHealthAnalyzer
     - item: JetInjector
     - item: Syringe
-      hand:
+      hand: &syringe-hand
         emptyLabel: borg-slot-injector-dropper-empty
         emptyRepresentative: Syringe
         whitelist:
@@ -998,14 +998,8 @@
           - Dropper
           - Syringe
     - item: BorgDropper
-      hand:
-        emptyLabel: borg-slot-injector-dropper-empty
-        emptyRepresentative: Dropper
-        whitelist:
-          tags:
-          - Dropper
-          - Syringe
-    - hand:
+      hand: *dropper-hand
+    - hand: &pill-hand
         emptyLabel: borg-slot-pill-empty
         emptyRepresentative: PillTricordrazine
         whitelist:
@@ -1015,7 +1009,7 @@
           - Bottle
           - Pill
     - item: PillCanisterTricordrazine
-      hand:
+      hand: &pill-canister-hand
         emptyLabel: borg-slot-pill-empty
         emptyRepresentative: PillCanister
         whitelist:
@@ -1025,7 +1019,7 @@
           - Bottle
           - Pill
     - item: ChemistryEmptyVial
-      hand:
+      hand: &vial-hand
         emptyLabel: borg-slot-small-containers-empty
         emptyRepresentative: ChemistryEmptyVial
         whitelist:
@@ -1034,23 +1028,9 @@
           tags:
           - ChemDispensable
     - item: ChemistryEmptyVial
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: ChemistryEmptyVial
-        whitelist:
-          components:
-          - FitsInDispenser
-          tags:
-          - ChemDispensable
+      hand: *vial-hand
     - item: ChemistryEmptyVial
-      hand:
-        emptyLabel: borg-slot-small-containers-empty
-        emptyRepresentative: ChemistryEmptyVial
-        whitelist:
-          components:
-          - FitsInDispenser
-          tags:
-          - ChemDispensable
+      hand: *vial-hand
     - item: HandLabeler
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: chem-module }
@@ -1070,43 +1050,14 @@
     - item: HandheldHealthAnalyzer
     - item: BorgHypo
     - item: Syringe
-      hand:
-        emptyLabel: borg-slot-injector-dropper-empty
-        emptyRepresentative: Syringe
-        whitelist:
-          tags:
-          - Dropper
-          - Syringe
+      hand: *syringe-hand
     - item: BorgDropper
-      hand:
-        emptyLabel: borg-slot-injector-dropper-empty
-        emptyRepresentative: Dropper
-        whitelist:
-          tags:
-          - Dropper
-          - Syringe
-    - hand:
-        emptyLabel: borg-slot-pill-empty
-        emptyRepresentative: PillTricordrazine
-        whitelist:
-          components:
-          - Pill
-          tags:
-          - PillCanister
-          - Bottle
-          - Pill
+      hand: *dropper-hand
+    - hand: *pill-hand
     - item: PillCanisterTricordrazine
-      hand:
-        emptyLabel: borg-slot-pill-empty
-        emptyRepresentative: PillCanister
-        whitelist:
-          components:
-          tags:
-          - PillCanister
-          - Bottle
-          - Pill
+      hand: *pill-canister-hand
     - item: Beaker
-      hand:
+      hand: &chemical-container-hand
         emptyLabel: borg-slot-chemical-containers-empty
         emptyRepresentative: Beaker
         whitelist:
@@ -1115,23 +1066,9 @@
           tags:
           - ChemDispensable
     - item: Beaker
-      hand:
-        emptyLabel: borg-slot-chemical-containers-empty
-        emptyRepresentative: Beaker
-        whitelist:
-          components:
-          - FitsInDispenser
-          tags:
-          - ChemDispensable
+      hand: *chemical-container-hand
     - item: Beaker
-      hand:
-        emptyLabel: borg-slot-chemical-containers-empty
-        emptyRepresentative: Beaker
-        whitelist:
-          components:
-          - FitsInDispenser
-          tags:
-          - ChemDispensable
+      hand: *chemical-container-hand
     - item: HandLabeler
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: adv-chem-module }
