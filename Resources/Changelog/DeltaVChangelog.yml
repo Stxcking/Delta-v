@@ -1,86 +1,4 @@
 ﻿Entries:
-- author: DisposableCrewmember42
-  changes:
-  - message: The pAI Software Catalog can be opened again
-    type: Fix
-  id: 1798
-  time: '2025-11-14T21:20:06.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4651
-- author: SirWarock
-  changes:
-  - message: A recent Lawsuit forced NT to provide a carepackage to NT stations if
-      their station's medical can't subdue a viral outbreak on their own.
-    type: Add
-  id: 1799
-  time: '2025-11-14T22:49:10.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4593
-- author: AeraAuling
-  changes:
-  - message: Ifrit have returned to the delta sector
-    type: Add
-  id: 1800
-  time: '2025-11-14T23:09:55.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4570
-- author: DisposableCrewmember42
-  changes:
-  - message: Shock collars are now secured. Those without access will be shocked,
-      so smuggle insuls into perma!
-    type: Tweak
-  id: 1801
-  time: '2025-11-14T23:16:08.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4654
-- author: SirWarock
-  changes:
-  - message: Added Jaegermister and a few cocktails made from it!
-    type: Add
-  id: 1802
-  time: '2025-11-14T23:18:53.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4653
-- author: BarryNorfolk
-  changes:
-  - message: Killing the grappled target of a grappler no longer causes them to be
-      stuck forever
-    type: Fix
-  id: 1803
-  time: '2025-11-14T23:32:06.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4546
-- author: SirWarock
-  changes:
-  - message: Interdyne, a rival company, scores a research-breakthrough, causing dead
-      cells to regenerate burnt tissue quicker - But is that a good thing..? (Zombies
-      heal Heat & Shock Damage quicker, but they still take more damage of it.)
-    type: Tweak
-  - message: Upon zombification, zombies don't discard their gloves to show off their
-      green nail polish anymore.
-    type: Tweak
-  id: 1804
-  time: '2025-11-14T23:45:13.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4585
-- author: ShepardToTheStars
-  changes:
-  - message: Fixed chief engeering's hardsuit and engineering hardsuit sprite for
-      Feroxis, Vulpkanins, and Harpies.
-    type: Fix
-  id: 1805
-  time: '2025-11-15T17:35:58.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4663
-- author: SirWarock
-  changes:
-  - message: Defibrillators no longer sever limbs when used to revive patients!
-    type: Fix
-  id: 1806
-  time: '2025-11-15T18:44:31.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4583
-- author: Aera Aulin, RoosterWhiddon
-  changes:
-  - message: New hardsuit designs for the mystagogue have been shipped out. These
-      are functionally identical to the original, just more fashionable.
-    type: Tweak
-  - message: swapped the upstream RD hardsuit for our Mystagogue hardsuit.
-    type: Fix
-  id: 1807
-  time: '2025-11-15T21:40:25.0000000+00:00'
-  url: https://github.com/DeltaV-Station/Delta-v/pull/4647
 - author: kotobdev
   changes:
   - message: Vox now possess a cortical stack, in place of a brain.
@@ -4364,4 +4282,80 @@
   id: 2298
   time: '2026-05-15T21:32:40.0000000+00:00'
   url: https://github.com/DeltaV-Station/Delta-v/pull/5503
+- author: sowelipililimute
+  changes:
+  - message: You can now build pagers that send notifications to linked PDAs when
+      pressed.
+    type: Add
+  id: 2299
+  time: '2026-05-16T15:08:50.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5799
+- author: rebe83
+  changes:
+  - message: Diona nymphs are now ghost roles. Chirp!
+    type: Tweak
+  id: 2300
+  time: '2026-05-16T15:21:17.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5802
+- author: Radezolid
+  changes:
+  - message: Now syndicate refugees spawn with a syndicate headset again, but with
+      the common channel only.
+    type: Tweak
+  id: 2301
+  time: '2026-05-17T05:45:23.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5698
+- author: Stxcking
+  changes:
+  - message: Added a new plant mutation between Ambrosia Vulgaris and Ambrosia Deus
+      called "Ambrosia Nobilis" which contains Tricordrazine and Negacordrazine!
+    type: Add
+  id: 2302
+  time: '2026-05-18T00:09:51.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5575
+- author: Minerva
+  changes:
+  - message: Tape recorders now change their voice when hidden in plushies, toilets,
+      or plants.
+    type: Tweak
+  id: 2303
+  time: '2026-05-18T01:27:45.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5629
+- author: cargomouse
+  changes:
+  - message: Added nocaf coffee to Solar's Best Hot Drinks. Contains no caffeine or
+      theobromine.
+    type: Add
+  id: 2304
+  time: '2026-05-18T03:05:21.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5582
+- author: keekee38
+  changes:
+  - message: after years of research, NT finally managed to give more clothes pockets
+    type: Tweak
+  id: 2305
+  time: '2026-05-18T03:12:21.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5646
+- author: rebe83
+  changes:
+  - message: Hypereutactic blades have been slightly refined, dealing more damage
+      and are more lightweight.
+    type: Tweak
+  id: 2306
+  time: '2026-05-18T03:38:49.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5721
+- author: AeraAulin, Ahzpy
+  changes:
+  - message: Added the syndicate dual swords
+    type: Add
+  id: 2307
+  time: '2026-05-18T03:39:52.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5725
+- author: Stxcking
+  changes:
+  - message: Readd Round Start Tools Module to Medical, Service, and Janitor Borgs.
+    type: Tweak
+  id: 2308
+  time: '2026-05-18T03:44:36.0000000+00:00'
+  url: https://github.com/DeltaV-Station/Delta-v/pull/5657
 Order: 1
