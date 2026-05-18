@@ -41,7 +41,7 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 10
-  - type: ProjectileBatteryAmmoProvider
+  - type: BatteryAmmoProvider # DeltaV - ProjectileBatteryAmmoProvider was refactored.
     proto: HoloFlareCyan
     fireCost: 240
   - type: EnergyGun
