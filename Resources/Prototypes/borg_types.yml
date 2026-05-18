@@ -81,6 +81,7 @@
   pdaAccentVerticalColor: "#ffd187"
   # End DeltaV - Borg PDAs
 
+
 # Salvage borg
 - type: borgType
   id: mining
@@ -131,6 +132,7 @@
   pdaAccentVerticalColor: "#8900c9"
   # End DeltaV - Borg PDAs
 
+
 # Janitor borg
 - type: borgType
   id: janitor
@@ -178,6 +180,7 @@
   # Begin DeltaV - Borg PDAs
   pdaBorderColor: "#5D2D56"
   # End DeltaV - Borg PDAs
+
 
 # Medical borg
 - type: borgType
@@ -248,6 +251,7 @@
   pdaBorderColor: "#d7d7d0"
   pdaAccentVerticalColor: "#447987"
   # End DeltaV - Borg PDAs
+
 
 # Service borg
 - type: borgType
