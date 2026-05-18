@@ -27,7 +27,7 @@
       - state: inhand-right-unshaded
         shader: unshaded
   - type: Gun
-    examineCaliber: gun-examine-energybolt-holoflare
+#    examineCaliber: gun-examine-energybolt-holoflare # DeltaV - Does not exist.
     selectedMode: SemiAuto
     fireRate: 2
     availableModes:
@@ -39,7 +39,7 @@
     maxCharge: 1200
     startingCharge: 1200
   - type: BatterySelfRecharger
-    autoRecharge: true
+#    autoRecharge: true # DeltaV - Does not exist under BatterySelfRecharger.
     autoRechargeRate: 10
   - type: BatteryAmmoProvider # DeltaV - ProjectileBatteryAmmoProvider was refactored.
     proto: HoloFlareCyan
