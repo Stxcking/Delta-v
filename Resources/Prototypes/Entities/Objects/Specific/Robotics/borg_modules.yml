@@ -670,6 +670,7 @@
   - type: ItemBorgModule
     hands:
     - item: WeaponGrapplingGun
+    - item: NFWeaponHoloflareGun # DeltaV
     - item: BorgFireExtinguisher
     - item: BorgHandheldGPSBasic
     - item: HandHeldMassScannerBorg

@@ -17,6 +17,7 @@
   recipes:
   - Fulton
   - FultonBeacon
+  - NFWeaponHoloflareGun
 
 - type: latheRecipePack
   id: SalvageWeapons
