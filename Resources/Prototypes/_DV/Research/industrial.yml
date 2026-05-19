@@ -39,6 +39,7 @@
   cost: 7500
   recipeUnlocks:
   - ConstructionBagOfHolding
+  - BorgModuleAdvancedConstruction
 
 # Tier 3
 

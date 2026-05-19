@@ -23,3 +23,5 @@ borg-slot-rod-empty = Fishing rod slot
 borg-slot-fish-empty = Fish slot
 borg-slot-slip-empty = Slipping slot
 borg-slot-pie-empty = Pie slot
+
+borg-slot-pipe-empty = Pipe slot

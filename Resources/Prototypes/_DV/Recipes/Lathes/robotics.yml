@@ -103,6 +103,13 @@
   id: BorgModuleMusique
   result: BorgModuleMusique
 
+# Engineering Modules
+
+- type: latheRecipe
+  parent: BaseGoldBorgModuleRecipe
+  id: BorgModuleAdvancedConstruction
+  result: BorgModuleAdvancedConstruction
+
 # Robo Neuroling recipes
 
 - type: latheRecipe
