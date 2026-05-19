@@ -5,6 +5,7 @@
   recipes:
   - HolotapeProjector
   - SheetPlasteel1Engineering
+  - ConstructionBag
 
 ## Dynamic
 
@@ -39,3 +40,8 @@
   - ClothingOuterSuitAtmosFire
   - ClothingHeadHelmetAtmosFire
   - ClothingOuterVoidsuitEngineering
+
+- type: latheRecipePack
+  id: AdvancedConstruction
+  recipes:
+  - ConstructionBagOfHolding

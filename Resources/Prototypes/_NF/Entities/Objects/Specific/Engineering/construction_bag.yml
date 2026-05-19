@@ -4,7 +4,7 @@
   name: construction bag
   description: A robust bag for construction specialists and engineers alike to carry large amounts of construction materials. Magnetises any nearby construction materials when attached to a belt.
   components:
-  - type: MagnetPickup
+#  - type: MagnetPickup # DeltaV - Gives you a reason to get the bluespace version.
   - type: Sprite
     sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi
     state: icon
@@ -27,7 +27,7 @@
       - RodMetal1
       - Sheet
       - CableCoil
-      components:
+#      components: # DeltaV - ConstructionMaterials is a tag.
       - ConstructionMaterials
     blacklist:
       tags:
@@ -78,3 +78,14 @@
   - type: Storage
     grid:
     - 0,0,19,9
+# Begin DeltaV Additions - On/Off Toggle
+  - type: ItemToggle
+    soundActivate: &soundActivate
+      collection: sparks
+      params:
+        variation: 0.25
+    soundDeactivate: *soundActivate
+  - type: ItemToggleExamine
+    on: magnet-pickup-component-magnet-on
+    off: magnet-pickup-component-magnet-off
+# End DeltaV Additions - On/Off Toggle
