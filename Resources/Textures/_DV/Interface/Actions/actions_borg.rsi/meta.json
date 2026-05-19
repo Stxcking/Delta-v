@@ -81,6 +81,9 @@
         },
         {
             "name": "service-dj-module"
+        },
+        {
+            "name": "engineering-adv-construction-module"
         }
     ]
 }

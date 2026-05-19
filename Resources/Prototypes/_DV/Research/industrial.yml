@@ -29,7 +29,7 @@
   - ClothingOuterVoidsuitEngineering
 
 - type: technology
-  id: BluespaceConstruction
+  id: AdvancedConstruction
   name: research-technology-advanced-construction
   icon:
     sprite: _NF/Objects/Specific/Engineering/construction_bag.rsi

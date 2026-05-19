@@ -985,6 +985,7 @@
     layers:
     - state: engineering
     - state: icon-construction-adv
+      sprite: _DV/Objects/Specific/Robotics/borgmodule.rsi
   - type: ItemBorgModule
     hands:
     - item: ConstructionBagOfHolding
@@ -1025,3 +1026,5 @@
     - hand: *pipe-hand
     - item: SprayPainter
       hand: *spraypainter-hand
+  - type: BorgModuleIcon
+    icon: { sprite: _DV/Interface/Actions/actions_borg.rsi, state: engineering-adv-construction-module }

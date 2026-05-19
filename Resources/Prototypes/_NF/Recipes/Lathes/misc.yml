@@ -18,7 +18,7 @@
   id: ConstructionBag
   result: ConstructionBag
   completetime: 1
-#  category: Tools # DeltaV
+#  category: Tools
   materials:
     Steel: 500
     Cloth: 500
