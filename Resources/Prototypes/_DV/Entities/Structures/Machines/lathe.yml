@@ -93,6 +93,7 @@
     - UpgradeKits
     - UpgradeKits_Goob
     - EngineeringHardsuits
+    - AdvancedConstruction
   - type: Machine
     board: EngineeringTechFabCircuitboard
   - type: StealTarget
